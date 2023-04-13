@@ -27,16 +27,49 @@ Verde #94C12D
 /*DEFINICIÓN Y CONFIGURACIÓN DEL GRID*/
 .container{
     display: grid;
-    grid-template-rows: 70px 35px auto 80px;
+    grid-template-rows: 200px 200px 200px;
     grid-template-areas: "header"
                         "barnav"
                         "textview"
                         "footer" ;
+    width: 100%;
+    justify-content: center;
+    grid-template-columns: 30% 30% 30%;
+    grid-gap: 20px;
+    background-color: white;
+    padding: 10px;
 }
-.header{ grid-area: header; background-color: white;}
-.barnav{grid-area: barnav; background-color:#F28D28;}
-.textview{grid-area: textview; background-color: #ffd6ac;}
-.footer{grid-area:footer;background-color: white;}
+.grid-item{
+    border-color: #a3a3a3;
+    border-style: solid;
+    border-width: 2px;
+    font-size: 25px;
+
+
+}
+.titulo{
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+}
+
+
+
+.header{
+    grid-area: header;
+    background-color: white;}
+.barnav{
+    grid-area: barnav;
+    background-color:#F28D28;
+    border-style: solid none solid none;
+    border-color:#94C12D ;
+    border-width: 4px; }
+.textview{
+    grid-area: textview;
+    background-color: #ffd6ac;}
+.footer{
+    grid-area:footer;
+    background-color: white;}
 /*------------------------------*/
 body{
     height: 100%;
@@ -45,8 +78,8 @@ header {
     background-color: white;
     width: 100%;
     height: 70px;
-    margin: -8px;
-    border-bottom: 4px inset #94C12D;
+    /*margin: -8px;
+    border-bottom: 4px inset #94C12D;*/
     display: flex;
     justify-content: center;
     align-items: center;
@@ -57,7 +90,7 @@ footer {
     background-color: white;
     width: 100%;
     text-align: center;
-    
+
     border-top:4px inset #b3ff02;
 }
 
@@ -76,14 +109,14 @@ h1 {
     height: 100%;
     object-fit: contain;
     align-self: center;
-    
+
 }
 
 .barnav {
     width: 100%;
     height: 35px;
-    margin: -8px;
-    border-bottom: 4px inset #94C12D;
+    /*margin: -8px;
+    border-bottom: 4px inset #94C12D;*/
     display: flex;
     justify-content: space-evenly;
     align-items: center;
