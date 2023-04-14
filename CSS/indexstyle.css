@@ -1,5 +1,5 @@
 /*DEFINICIÓN Y CONFIGURACIÓN DEL GRID*/
-.container{
+.contenedorindex{
     display: grid;
     grid-template-rows: 70px 40px auto 80px;
     grid-template-areas:"encabezado"
@@ -27,4 +27,10 @@
     background-color: #D9213F;
     border-radius: 6px;
     padding: 3px;
+}
+.contanos:hover{
+    font-size: larger;
+    font-weight: bold;
+    transition-property: all;
+    transition-duration: 0.4s;
 }
