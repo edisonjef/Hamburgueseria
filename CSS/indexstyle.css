@@ -1,0 +1,36 @@
+/*DEFINICIÓN Y CONFIGURACIÓN DEL GRID*/
+.contenedorindex{
+    display: grid;
+    grid-template-rows: 70px 40px auto 80px;
+    grid-template-areas:"encabezado"
+                        "barnav"
+                        "textview"
+                        "footer" ;
+}
+.header{ grid-area: encabezado; background-color: white;}
+.barnav{grid-area: barnav; background-color:#F28D28;}
+.textview{grid-area: textview; background-color: #ffd6ac;}
+.footer{grid-area:footer;background-color: white;}
+/*Cuerpo de la página*/
+.textview{
+    margin-left: -8px;
+    margin-right: -10px;
+}
+/*---sin <pies> ni <cabeza>---*/
+.subt{
+    text-align: center;
+}
+.contanos{
+    color: white;
+    margin-left: 25px;
+    text-decoration: none;
+    background-color: #D9213F;
+    border-radius: 6px;
+    padding: 3px;
+}
+.contanos:hover{
+    font-size: larger;
+    font-weight: bold;
+    transition-property: all;
+    transition-duration: 0.4s;
+}

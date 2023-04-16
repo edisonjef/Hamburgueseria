@@ -1,0 +1,40 @@
+body{
+	background-color: #ffd6ac;
+	width: 100%;
+}
+
+
+.contenedormenu{
+	width: 100%;
+	display: grid;
+	grid-template-columns: 25% 25% 25%;
+	justify-content: space-evenly;
+	grid-gap: 10px;
+
+	padding: 10px;
+
+}
+
+.grid-item{
+	background-color: white;
+	border-style: solid;
+	border-width: 2px;
+	border-color: rgb(220, 220, 220);
+	font-size: 20px;
+	height: 150px;
+
+}
+.grid-item:hover{
+
+	border-color: black;
+
+}
+
+
+.tituloMenu {
+	font-size: 24px;
+    font-weight: bold;
+    grid-column: 1 / -1;
+    margin-bottom: 15px;
+	text-align: center;
+}
