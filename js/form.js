@@ -1,36 +1,43 @@
 let form = document.getElementById('contacto');
-let comentarios = [];
-let value;
 
 function GuardaComentarios() {
-    let text = document.getElementById('comentarios').value;
-    let email = document.getElementById('email').value;
-    comentarios.push(text)
-    comentarios.push(email)
+  let comentario = document.getElementById('comentarios').value;
+  let email = document.getElementById('email').value;
 
-    localStorage.setItem('coment', comentarios);
+
+  // Eliminar todas las claves
+  localStorage.clear();
+
+
+
+  localStorage.setItem('email', email);
+  localStorage.setItem('coment', comentario);
+
+}
+
+form.addEventListener('submit', (event) => {
+  GuardaComentarios();
+  alert('Se envio tu comentario, Gracias por colaborar !!');
+
+});
+
+
+
 
 // Ontener el valor de una clave
-value = localStorage.getItem('coment');
+// value = localStorage.getItem('coment');
 
 // Eliminar una clave
 //localStorage.removeItem('key');
 
-// Eliminar todas las claves
-// localStorage.clear(); 
-  }
-
- form.addEventListener('submit', (event) => {
-    GuardaComentarios();
-     alert('Se envio tu comentario, Gracias por colaborar !!');
-     
-   });
-  
-
-
- 
 
 
 
 
-   
+
+
+
+
+
+
+
