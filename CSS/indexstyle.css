@@ -29,8 +29,25 @@
     padding: 3px;
 }
 .contanos:hover{
-    font-size: larger;
+    font-size: large;
     font-weight: bold;
     transition-property: all;
     transition-duration: 0.4s;
+}
+.promoqr{
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    align-content: center;
+}
+.contenetext{
+    width: 70%;
+    margin-right: 30px;
+    max-width: 400px;
+}
+.conteneqr{
+    width: 100%;
+    height: auto;
+    max-width: 200px;
+    border: 5px solid #94C12D;
 }
