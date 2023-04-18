@@ -1,0 +1,10 @@
+/*ANIMACIONES*/
+button:hover:nth-child(odd) {
+    color: rgb(255, 255, 255);
+    background-color:#D9213F;
+    border-radius:6px;
+    font-weight: bold;
+    transition-property: all;
+    transition-duration: 0.3s;
+}
+
