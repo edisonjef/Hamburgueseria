@@ -1,5 +1,5 @@
 /*DEFINICIÓN Y CONFIGURACIÓN DEL GRID*/
-.contenedorindex{
+.contenedor_index{
     display: grid;
     grid-template-rows: 70px 40px auto 80px;
     grid-template-areas:"encabezado"
@@ -9,24 +9,31 @@
 }
 .header{ grid-area: encabezado; background-color: white;}
 .barnav{grid-area: barnav; background-color:#F28D28;}
-.textview{grid-area: textview; background-color: #ffd6ac;}
+.bodynav{grid-area: textview; background-color: #ffd6ac;}
 .footer{grid-area:footer;background-color: white;}
 /*Cuerpo de la página*/
-.textview{
+.bodynav{
     margin-left: -8px;
     margin-right: -10px;
+    padding-bottom: 25px;
 }
 /*---sin <pies> ni <cabeza>---*/
 .subt{
     text-align: center;
 }
+/*Boton "Contanos tu experiencia"*/
+.caja_contanos{
+    margin-bottom: 15px;
+}
 .contanos{
     color: white;
     margin-left: 25px;
+    margin-bottom: 25px;
     text-decoration: none;
     background-color: #D9213F;
     border-radius: 6px;
     padding: 3px;
+    border-bottom: 4px solid #F28D28;
 }
 .contanos:hover{
     font-size: large;
@@ -34,20 +41,63 @@
     transition-property: all;
     transition-duration: 0.4s;
 }
-.promoqr{
+/*Caja del texto e imágen de la promo del QR*/
+.promo_qr{
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    align-content: center;
+    
+}
+/*Caja del texto*/
+.contene_text{
+    width: 70%;
+    margin-right: 30px;
+    max-width: 400px;
+    min-width: 200px;
+}
+/*Caja del jpg del QR*/
+.contene_qr{
+    width: 100%;
+    height: auto;
+    max-width: 200px;
+    border: 5px solid #94C12D;
+}
+.caja_nueva_supreme{
+    border-top: 4px solid #94C12D;
+    border-bottom: 4px solid rgb(13, 17, 28);
+    background-color: rgb(12,15,20,255);
+    border-bottom: 4px solid #D9213F;
+}
+.supreme{
+    color: #F28D28;
+    padding: 5px;
+}
+.present_supreme{
+    padding: 10px;
+    line-height: 50px;
+    text-align: right;
+}
+.caja_graph_supreme{
     display: flex;
     padding: 10px;
     align-items: center;
     align-content: center;
 }
-.contenetext{
-    width: 70%;
+.texto_supreme{
+    width: 50%;
     margin-right: 30px;
     max-width: 400px;
+    min-width: 200px;
+    text-align: center;
 }
-.conteneqr{
+.caja_img_supreme{
+    width: 50%;
+}
+.img_supreme{
     width: 100%;
     height: auto;
-    max-width: 200px;
-    border: 5px solid #94C12D;
+}
+.white{
+    color: whitesmoke;
 }
