@@ -70,7 +70,7 @@
     border-bottom: 4px solid #D9213F;
 }
 .supreme{
-    color: #F28D28;
+    color: #D9213F;
     padding: 5px;
 }
 .present_supreme{
@@ -82,11 +82,11 @@
     display: flex;
     padding: 10px;
     align-items: center;
-    align-content: center;
+    align-content:center;
 }
 .texto_supreme{
     width: 50%;
-    margin-right: 30px;
+    margin-left: 20px;
     max-width: 400px;
     min-width: 200px;
     text-align: center;
@@ -100,4 +100,28 @@
 }
 .white{
     color: whitesmoke;
+}
+.probala{
+    color: white;
+    margin-bottom: 25px;
+    text-decoration: none;
+    background-color: #D9213F;
+    padding: 2px;
+    border-radius: 6px;
+}
+.probala:hover{
+    padding-left: 40px;
+    padding-right: 40px;
+    transition-property: all;
+    transition-duration: 0.4s;
+}
+.caja_horario{
+    display: flex;
+    border-top: 4px solid #94C12D;
+}
+.text_horario{
+    width: 50%;
+}
+.horario{
+    width:50%;
 }
