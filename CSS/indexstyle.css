@@ -117,11 +117,18 @@
 }
 .caja_horario{
     display: flex;
-    border-top: 4px solid #94C12D;
+    padding-top: 15px;
 }
 .text_horario{
     width: 50%;
+    height: 50%;
+    margin-right: 15px;
+    text-align: center;
 }
-.horario{
-    width:50%;
+.img_horario{
+    width: 50%;
+    height: auto;
+}
+.subwavy{
+    text-decoration: underline 3px;
 }
