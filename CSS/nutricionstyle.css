@@ -1,113 +1,86 @@
-@font-face {
-    font-family: AristaPro;
-    src: url("/Media/Arista-Pro-Fat-trial.ttf");
-    }
-    @font-face {
-    font-family: Poppins;
-    src: url("/Media/Poppins-Regular.ttf");
-    }
-    @font-face {
-    font-family: PoppinsThin;
-    src: url("/Media/Poppins-Thin.ttf");
-    }
-    * {
-    font-family: Poppins;
-    color: black;
-    background-color: #ffd6ac;
-    }
-    .iconos-footer img {
-    width: 25px;
-    height: 25px;
-    margin: 5px;
-    }
+/*DEFINICIÓN Y CONFIGURACIÓN DEL GRID*/
+.contenedor_nutri {
+  display: grid;
+  grid-template-rows: 70px 40px auto 80px;
+  grid-template-areas: "encabezado"
+    "barnav"
+    "cuerpo"
+    "footer";
 
-    .derechos-reservados {
-        font-size: 14px;
-        color: #000000;
-        background-color: white;
-    }
-    .verde{
-        color: #94C12D;
-    }
-    .naranja{
-        color: #F28D28;
-    }
-    .rojo{
-        color: #D9213F;
-    }
-    .poppins{
-        font-family: PoppinsThin;
-    }
-    footer {
-        background-color: white;
-        text-align: center;
-        margin-left: -8px;
-        margin-right: -10px;
-        border-top:4px solid #b3ff02;
-    }
-    h1 {
-        font-family: AristaPro;
-        color: #D9213F;
-        font-size: 40px;
-        margin-left: 25px;
-        text-decoration: 4px underline #94C12D;
-    }
-    h2,p{
-        margin-left: 25px;
-    }
-    .nutri{
-        display: flex;
-        justify-content: space-between;
-    }
-    .linkbar {
-        background-color: #D9213F;
-        color: white;
-        object-fit: contain;
-        align-self: center;
-        text-decoration: none;
-        float: right;
-        padding: 0px 4px 0px 4px;
-        margin-right: 25px;
-        border-radius: 6px;
-    }
-    .linkbar:hover{
-        font-size: large;
-        transition-property: all;
-        transition-duration: 0.4s;
-    }
-    /*Style de la tabla*/
-    .container {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        text-align: center;
-        margin-bottom: 15px;
-        padding: 15px;
-        
-      }
-      .header2 {
-        font-size: 24px;
-        font-weight: bold;
-        grid-column: 1 / -1;
-        margin-bottom: 15px;
-      }
-      .item {
-        font-weight: bold;
-        background-color: #ffa347;
-      }
-      .calories {
-        background-color: #d1ff66;
-      }
-      .fats {
-        background-color: #ffa347;
-      }
-      .carbs {
-        background-color: #d1ff66;
-      }
-      .proteins {
-        background-color: #ffa347;
-      }
-      .item, .calories, .fats, .carbs, .proteins {
-        padding: 10px;
-        border:1px black;
-        font-weight: bold;
-      }
+}
+
+.header {
+  grid-area: encabezado;
+  background-color: white;
+}
+
+.barnav {
+  grid-area: barnav;
+  background-color: #F28D28;
+}
+.desarrollo{
+  grid-area: cuerpo;
+  background-color: #ffd6ac;
+  margin-left: -8px;
+    margin-right: -10px;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: white;
+}
+
+/*Style de la tabla*/
+.tabla {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  text-align: center;
+  margin-bottom: 15px;
+  padding: 15px;
+  gap: 4px;
+  border-color: black;
+}
+
+.header2 {
+  font-size: 24px;
+  font-weight: bold;
+  grid-column: 1 / -1;
+  margin-bottom: 15px;
+}
+
+.itemt {
+  font-weight: bold;
+  background-color: #ffa347;
+}
+
+.calories {
+  background-color: #d1ff66;
+}
+
+.fats {
+  background-color: #ffa347;
+}
+
+.carbs {
+  background-color: #d1ff66;
+}
+
+.proteins {
+  background-color: #ffa347;
+}
+
+.itemt{
+  padding: 5px;
+}
+.calories,
+.fats,
+.carbs,
+.proteins {
+  font-weight: bold;
+}
+.subrayado{
+  text-decoration: underline wavy #94C12D;
+}
+.centrado{
+  text-align: center;
+}
