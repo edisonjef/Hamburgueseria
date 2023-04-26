@@ -7,4 +7,15 @@ button:hover:nth-child(odd) {
     transition-property: all;
     transition-duration: 0.3s;
 }
-
+table,
+    th,
+    td,
+    tr {
+        
+        color: #F28D28;
+        text-align: center;
+        padding: 0,7em;
+        margin: auto;
+        margin-top: 1em;
+        
+    }

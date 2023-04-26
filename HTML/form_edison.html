@@ -26,6 +26,7 @@
       <a class="linkbar" style="color: black;" href="ubicacion.html">Ubicación</a>
       <a class="linkbar" style="color: black;" href="nutricion.html">Nutrición</a>
       <a class="linkbar" style="color: black;" href="Index.html">Volver al inicio</a>
+
     </nav>
     <div class="item textview">
       <form class="container" id="contacto">
@@ -42,7 +43,24 @@
           style=" border:2px solid #94C12D ;margin: 10px; margin-left: 0px;">Enviar</button>
       </form>
     </div>
-    <footer>
+
+    <div>
+      <table>
+        <tr>
+          <th>Ciudad</th>
+          <th>Temperatura</th>
+          <th>Temp Min</th>
+          <th>Tem Max</th>
+        </tr>
+        <tr>
+          <td id="ciudad"></td>
+          <td id="temperatura"></td>
+          <td id="temMin"></td>
+          <td id="temMax"></td>
+        </tr>
+      </table>
+    </div>
+    <footer style="margin-top: 2em;">
       <div class="iconos-footer">
         <img src="/Media/IG.png" alt="Icono 1">
         <img src="/Media/wpp.png" alt="Icono 2">
@@ -61,6 +79,8 @@
     integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
     crossorigin="anonymous"></script>
   <script src="/js/form.js"></script>
-</body>
+  <script src="/js/clima.js"></script>
 
+
+</body>
 </html>
