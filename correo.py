@@ -8,7 +8,7 @@ conexion.ehlo()
 conexion.starttls()
 
 #Iniciar session en el servidor
-conexion.login(user='hamburgueseriavisual@gmail.com', password='midoudgvwjsolaad')
+conexion.login(user='hamburgueseriavisual@gmail.com', password='')
 
 # Enviar el mensaje
 asunto = 'Comentario Web  Hamburguesas'
