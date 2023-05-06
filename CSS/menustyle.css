@@ -77,40 +77,69 @@
 
   .grid-item {
 	background-color: white ;
-	;
+
 	height: 150px;
 
   }
 
   .grid-item:hover {
-		background-color:#ccc;
 
+		background-color:#ccc;
+		display: block;
+
+
+
+  }
+
+  .grid-item:active {
+	background-color:#b0b0b0;
   }
 
 
   .flex-container {
 	display: flex;
 	justify-content: space-between;
-	align-items: center;     /*Centrado en y */
+	align-items:center;     /*Centrado en y */
     justify-content: center; /*Centrado en x */
 
   }
 
   .flex-item {
+	display: flex;
+	flex-direction: column;
+	/*justify-content: space-between;*/
 	font-family: Poppins;
     color: black;
 	font-size: 18px;
 	font-weight: 600;
 	text-align: center;
 	align-items: center;
-
-
   }
 
+  .grid-item:hover .boton {
+	opacity: 1; /* el boton se muestra cuando se hace hover */
+  }
 
 img {
 	height: 150px;
 }
+
+
+.boton {
+	opacity: 0; /* el boton esta oculto */
+
+	border: 2px solid black; /*anchura, estilo y color borde*/
+	padding: 5px; /*espacio alrededor texto*/
+	background-color: whitesmoke; /*color botón*/
+	color: black; /*color texto*/
+	text-decoration: none; /*decoración texto*/
+	font-family: Poppins; /*tipografía texto*/
+	font-size: 16px;
+	font-weight: 600; /* ancho fuente */
+	border-radius: 10px; /*bordes redondos*/
+	}
+
+
 
 .subrayado{
 	text-decoration: underline wavy #94C12D;
