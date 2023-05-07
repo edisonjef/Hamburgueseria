@@ -84,17 +84,8 @@
 
   .grid-item:hover {
 
-		background-color:#ccc;
-		display: block;
-
-
-
+		background-color:#e7e7e7;
   }
-
-  .grid-item:active {
-	background-color:#b0b0b0;
-  }
-
 
   .flex-container {
 	display: flex;
@@ -107,7 +98,7 @@
   .flex-item {
 	display: flex;
 	flex-direction: column;
-	/*justify-content: space-between;*/
+	justify-content: space-between;
 	font-family: Poppins;
     color: black;
 	font-size: 18px;
@@ -116,7 +107,7 @@
 	align-items: center;
   }
 
-  .grid-item:hover .boton {
+  .grid-item:hover button {
 	opacity: 1; /* el boton se muestra cuando se hace hover */
   }
 
@@ -124,12 +115,10 @@ img {
 	height: 150px;
 }
 
-
-.boton {
+button {
 	opacity: 0; /* el boton esta oculto */
-
 	border: 2px solid black; /*anchura, estilo y color borde*/
-	padding: 5px; /*espacio alrededor texto*/
+	padding: 4px; /*espacio alrededor texto*/
 	background-color: whitesmoke; /*color botón*/
 	color: black; /*color texto*/
 	text-decoration: none; /*decoración texto*/
@@ -139,9 +128,39 @@ img {
 	border-radius: 10px; /*bordes redondos*/
 	}
 
+button:hover {
+
+	background-color: rgb(201, 200, 200); /*color botón*/
+
+	}
+
+button:active {
+
+	background-color: rgb(132, 132, 132); /*color botón*/
+
+}
 
 
 .subrayado{
 	text-decoration: underline wavy #94C12D;
+}
+
+h3 {
+    font-family: AristaPro;
+    color: #D9213F;
+    font-size: 30px;
+    text-align: center;
+}
+.pedido_activo {
+
+	position: sticky;
+	top: 20px; /* distancia desde el borde superior */
+	
+	min-height: 100PX;
+	width: 100%;
+	font-weight: 800;
+	background-color: #F28D28;
+	border-bottom: 5px solid #94C12D;
+	border-top: 5px solid #94C12D;
   }
 
