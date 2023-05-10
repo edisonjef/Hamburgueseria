@@ -1,0 +1,33 @@
+@font-face {
+    font-family: AristaPro;
+    src: url("/Media/Arista-Pro-Fat-trial.ttf");
+}
+@font-face {
+    font-family: Poppins;
+    src: url("/Media/Poppins-Regular.ttf");
+}
+@font-face {
+    font-family: PoppinsThin;
+    src: url("/Media/Poppins-Thin.ttf");
+}
+* {
+    font-family: Poppins;
+    color: black;
+}
+
+
+
+h3{
+    text-align: center; color: #D9213F; font-size: 30px;
+}
+
+
+
+.subrayado{
+	text-decoration: underline wavy #94C12D;
+  }
+
+
+.centrado{
+        text-align: center;
+      }
