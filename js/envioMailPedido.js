@@ -55,7 +55,7 @@ var mails = ['edisonjef@gmail.com']
 
 function envioPedidoMailCliente() {
   let mailCliente = mail.value
-  let body = nombre.value + "<br><br>" + "  Su orden N° "+ sessionStorage.getItem('numeroPedido') + " esta siendo preparada, le avisaremos cuando este en camino." +  "<br><br>" + "Saludos Hamburguesria Visual!!"
+  let body = nombre.value + "<br><br>" + "  Su orden N° "+ sessionStorage.getItem('numeroPedido') + " esta siendo preparada, le avisaremos cuando este en camino." +  "<br><br>" + "Saludos Visual Burgers!!"
 
 
 
