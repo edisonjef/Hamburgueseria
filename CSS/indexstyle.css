@@ -11,6 +11,75 @@
 .barnav{grid-area: barnav; background-color:#F28D28;}
 .bodynav{grid-area: textview; background-color: #ffd6ac;}
 .footer{grid-area:footer;background-color: white;}
+/*Lineas de corte*/
+@media only screen and (min-width: 1920px) {
+    .promo_qr,.caja_nueva_supreme,.caja_graph_supreme{
+        flex-direction: row;
+        align-content: center;
+    }
+    .texto_supreme{
+        order: 2;
+    }
+    .img_supreme{
+        order: 1;
+    }
+    .present_supreme{
+        order: 1;
+        text-align: right;
+    }
+}
+@media only screen and (max-width: 1280px) {
+    .promo_qr,.caja_nueva_supreme,.caja_graph_supreme{
+        flex-direction: row;
+        align-content: center;
+        align-content: center;
+    }
+    .texto_supreme{
+        order: 2;
+    }
+    .img_supreme{
+        order: 1;
+    }
+    .present_supreme{
+        order: 1;
+        text-align: right;
+    }
+}
+@media only screen and (max-width: 800px) {
+    .promo_qr,.caja_nueva_supreme,.caja_graph_supreme{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .contene_text{
+        order: 1;
+    }
+    .contene_qr,.texto_supreme{
+        order: 2;
+    }
+    .caja_img_supreme{
+        order: 3;
+    }
+    h2.present_supreme{
+        order: 1;
+        text-align: center;
+    }
+    .caja_horario{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .text_horario{
+        order: 1;
+        width: 100%;
+        height: auto;
+    }
+    .img_horario{
+        order: 2;
+        width: 100%;
+        height: auto;
+    }
+}
 /*Cuerpo de la página*/
 .bodynav{
     margin-left: -8px;
@@ -55,6 +124,7 @@
     margin-right: 30px;
     max-width: 400px;
     min-width: 200px;
+    text-align: center;
 }
 /*Caja del jpg del QR*/
 .contene_qr{
@@ -76,7 +146,6 @@
 .present_supreme{
     padding: 10px;
     line-height: 50px;
-    text-align: right;
 }
 .caja_graph_supreme{
     display: flex;
