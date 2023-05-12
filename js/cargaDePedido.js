@@ -1,3 +1,5 @@
+
+
 // captura de los elementos del pedido
 var divPedidoActivo = document.getElementById('pedido_activo').getElementsByTagName('div')
 sessionStorage.clear()

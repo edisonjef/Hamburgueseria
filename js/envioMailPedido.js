@@ -27,7 +27,7 @@ function validarFormPedido(evento) {
       envioPedidoMail();
       alert("Pedido enviado, numero de orden: " + sessionStorage.getItem('numeroPedido'));
       window.location.href = "/menu.html";
-      this.submit();
+      //this.submit();
 
 
     } else {
@@ -47,7 +47,7 @@ const direccion = document.getElementById('direccion')
 const telefono = document.getElementById('telefono')
 const fecha = new Date();
 var mailCliente = mail.value
-var mails = ['edisonjef@gmail.com']
+var mails = ['edisonjef@gmail.com', ' jorware@hotmail.com']
 
 
 

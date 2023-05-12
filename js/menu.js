@@ -1,3 +1,5 @@
+
+
 // define una variable para cada botón
 
 var button1 = document.getElementById('1');
@@ -128,6 +130,9 @@ vaciar.addEventListener('click', function () {
 
   console.log(pedido);
   console.log('boton vaciar carrito');
+  cargaDePedido();
+  window.location.href = "/formEnvioPedido.html";
+  
 
 });
 
@@ -256,3 +261,50 @@ function muestraMenu() {
   }
 
 }
+
+
+
+
+
+
+
+// parte de Edison
+
+// captura de los elementos del pedido
+var divPedidoActivo = document.getElementById('pedido_activo').getElementsByTagName('div')
+sessionStorage.clear()
+sessionStorage.setItem('numeroPedido',(Math.floor(Math.random()*302)));
+var pedidoAenviar = "Orden N°: " + sessionStorage.getItem('numeroPedido') + "<br>";
+
+
+
+
+
+// Carga de pedido en variable de session
+
+function cargaDePedido() {
+
+
+
+
+    for (var i = 0; i < divPedidoActivo.length; i++) {
+
+
+        if (divPedidoActivo[i].innerText != "" && divPedidoActivo[i].innerText != "VACIAR CARRITO") {
+
+            pedidoAenviar = pedidoAenviar + "<br>" + divPedidoActivo[i].innerText
+        }
+        
+        sessionStorage.setItem('pedido', pedidoAenviar);
+        console.log(sessionStorage.getItem('pedido'))
+
+
+    }
+    
+    
+
+
+
+}
+
+
