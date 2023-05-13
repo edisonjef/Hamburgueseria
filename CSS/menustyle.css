@@ -142,25 +142,55 @@ button:active {
 
 
 .subrayado{
+	padding: 10px;
+	font-family: AristaPro;
+    color: #D9213F;
+    font-size: 36px;
+    text-align: center;
 	text-decoration: underline wavy #94C12D;
 }
 
-h3 {
-    font-family: AristaPro;
+
+
+.descripcion {
+
     color: #D9213F;
-    font-size: 30px;
+    font-size: 20px;
     text-align: center;
 }
-.pedido_activo {
+.pedido-activo {
 
+	display: none;
 	position: sticky;
 	top: 20px; /* distancia desde el borde superior */
-	
 	min-height: 100PX;
 	width: 100%;
-	font-weight: 800;
+	grid-template-columns: 50% 10% 20%;
+	justify-content:space-around ;
 	background-color: #F28D28;
 	border-bottom: 5px solid #94C12D;
 	border-top: 5px solid #94C12D;
   }
 
+  .pedido-item{
+
+	font-weight: 800;
+	font-size: 20px;
+
+  }
+
+  .pedido-titulo {
+	grid-area: 1/1/1/4;
+  }
+
+  .pedido-botones1 {
+	padding: 10px;
+	grid-area: 15/1/15/2;
+	align-items:center;
+
+  }
+  .pedido-botones2 {
+	padding: 10px;
+	grid-area: 15/3/15/4;
+
+  }
