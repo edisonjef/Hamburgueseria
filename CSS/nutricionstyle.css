@@ -8,7 +8,18 @@
     "footer";
 
 }
-
+/*Lineas de Corte*/
+@media only screen and (min-width: 1920px){
+}
+@media only screen and (max-width: 1280px) {
+}
+@media only screen and (max-width: 800px) {
+  .lechuga,.tomate,.pan{
+    flex-direction: column;
+    align-items: center;
+  }
+}
+/*Otros ajustes*/
 .header {
   grid-area: encabezado;
   background-color: white;

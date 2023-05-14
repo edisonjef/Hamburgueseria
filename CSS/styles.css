@@ -62,7 +62,7 @@ h2,p{
     border-bottom: 4px solid #94C12D;
     border-top: 4px solid #94C12D;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     overflow: scroll;
 }
 .barnav::-webkit-scrollbar{
