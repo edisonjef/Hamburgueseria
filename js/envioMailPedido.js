@@ -25,6 +25,7 @@ function validarFormPedido(evento) {
         return;
       }
       envioPedidoMail();
+      envioPedidoMailCliente();
       alert("Pedido enviado, numero de orden: " + sessionStorage.getItem('numeroPedido'));
       window.location.href = "/menu.html";
       //this.submit();
@@ -46,27 +47,48 @@ const mail = document.getElementById('email')
 const direccion = document.getElementById('direccion')
 const telefono = document.getElementById('telefono')
 const fecha = new Date();
-var mailCliente = mail.value
-var mails = ['edisonjef@gmail.com', ' jorware@hotmail.com']
+var mails = ['edisonjef@gmail.com']
 
 
 
-// funcion de envio de pedido
+// funcion de envio de pedido a cliente
 
-function envioPedidoMail() {
-    let body = "De: " + nombre.value + "<br><br>" + fecha +  "<br><br>"  + "Direccion: " +  direccion.value + "<br><br>" + "Telefono: " + telefono.value + "<br><br>" + "Email: " + mail.value + "<br><br>" + sessionStorage.getItem('pedido')
+function envioPedidoMailCliente() {
+  let mailCliente = mail.value
+  let body = nombre.value + "<br><br>" + "  Su orden N° "+ sessionStorage.getItem('numeroPedido') + " esta siendo preparada, le avisaremos cuando este en camino." +  "<br><br>" + "Saludos Visual Burgers!!"
 
 
 
 
     Email.send({
         SecureToken: "5b823ad5-cf10-4194-8633-1994534abf23",
-        To: mails,
+        To: mailCliente,
         From: 'hamburgueseriavisual@gmail.com',
         Subject: "Pedido Web Hamburguesas",
         Body: body
     }).then(
         message => console.log(message)
     );
+
+}
+
+
+// funcion de envio de pedido a Hamburgueseria
+
+function envioPedidoMail() {
+  let body = "De: " + nombre.value + "<br><br>" + fecha +  "<br><br>"  + "Direccion: " +  direccion.value + "<br><br>" + "Telefono: " + telefono.value + "<br><br>" + "Email: " + mail.value + "<br><br>" + sessionStorage.getItem('pedido')
+
+
+
+
+  Email.send({
+      SecureToken: "5b823ad5-cf10-4194-8633-1994534abf23",
+      To: mails,
+      From: 'hamburgueseriavisual@gmail.com',
+      Subject: "Pedido Web Hamburguesas",
+      Body: body
+  }).then(
+      message => console.log(message)
+  );
 
 }

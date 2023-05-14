@@ -142,25 +142,63 @@ button:active {
 
 
 .subrayado{
+	padding: 10px;
+	font-family: AristaPro;
+    color: #D9213F;
+    font-size: 36px;
+    text-align: center;
 	text-decoration: underline wavy #94C12D;
 }
 
-h3 {
-    font-family: AristaPro;
+.precio{
+	font-size: 20px;
+	color: #D9213F
+}
+
+.descripcion {
+
     color: #D9213F;
-    font-size: 30px;
+    font-size: 20px;
     text-align: center;
 }
-.pedido_activo {
+.pedido-activo {
 
+	display: none;
 	position: sticky;
 	top: 20px; /* distancia desde el borde superior */
-	
 	min-height: 100PX;
 	width: 100%;
-	font-weight: 800;
+	grid-template-columns: 50% 10% 30%;
+	justify-content:space-around ;
 	background-color: #F28D28;
 	border-bottom: 5px solid #94C12D;
 	border-top: 5px solid #94C12D;
+  }
+
+  .pedido-item{
+
+	font-weight: 800;
+	font-size: 20px;
+
+  }
+
+  .pedido-titulo {
+	grid-area: 1/1/1/4;
+  }
+
+  .botones-container{
+   grid-area: 16/1/16/4;
+
+   display: grid;
+   grid-template-columns: 30% 30%;
+   justify-content: center;
+   align-items:center;
+   place-items: center;
+
+
+  }
+  .pedido-botones {
+	padding: 10px;
+
   }
 
