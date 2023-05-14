@@ -10,15 +10,66 @@
     font-family: PoppinsThin;
     src: url("/Media/Poppins-Thin.ttf");
 }
+
+.contenedor_Sucursal{
+    display: grid;
+    grid-template-rows: 70px 40px auto 80px;
+    grid-template-areas:"encabezado"
+                        "barnav"
+                        "textview"
+                        "footer" ;
+}
+.header{ grid-area: encabezado; background-color: white;}
+.barnav{grid-area: barnav; background-color:#F28D28;}
+.bodynav{grid-area: textview; background-color: #ffd6ac;}
+.footer{grid-area:footer;background-color: white;}
+
+
+
+.centro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.mapa-container {
+    position: relative;
+    padding-bottom: 6.25%; /* Proporción 16:9 */
+    height: 0;
+    max-width: 100%;
+}
+
+.mapa-container2 {
+    position: relative;
+    padding-bottom: 20.25%; /* Proporción 16:9 */
+    height: 0;
+    max-width: 100%;
+    margin-bottom: 50px;
+}
+.mapa-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: 60%;
+}
+
+
+    
+
+
 * {
     font-family: Poppins;
     color: black;
 }
 
-
+iframe {
+    margin-top: 0px;
+    display: block;}
 
 h3{
-    text-align: center; color: #D9213F; font-size: 30px;
+    text-align: center; color: #D9213F; font-size: 30px; margin-bottom: 40px;
 }
 
 
@@ -31,3 +82,39 @@ h3{
 .centrado{
         text-align: center;
       }
+
+
+
+        /* Estilos para pantallas con ancho menor o igual a 768px */
+        @media only screen and (max-width: 768px) {
+            /* Estilos para el encabezado */
+            header {
+                display: flex;
+                justify-content: center;
+            }
+            .cimg {
+                max-width: 80%;
+            }
+            /* Estilos para la barra de navegación */
+
+            }
+            /* Estilos para el contenido */
+            .bodynav {
+                margin-top: 50px;
+            }
+            h1.subrayado {
+                font-size: 40px;
+                text-align: center;
+            }
+            h3.rojo {
+                font-size: 25px; 
+            }
+            .centrado {
+                margin-bottom: 50px;
+            }
+            iframe {
+                width: 50%;
+                height: 200px;
+                
+            }
+        
