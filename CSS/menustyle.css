@@ -150,7 +150,10 @@ button:active {
 	text-decoration: underline wavy #94C12D;
 }
 
-
+.precio{
+	font-size: 20px;
+	color: #D9213F
+}
 
 .descripcion {
 
