@@ -19,6 +19,20 @@ sabor sin &lt; pies &gt; ni &lt; cabeza &gt;
     font-family: Poppins;
     color: black;
 }
+@media only screen and (min-width: 1920px){
+    a.linkbar,a.linkbar2{
+        font-size: 30px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    footer > p.derechos-reservados{
+        font-size: 25px;
+    }
+    footer > div.iconos-footer > img{
+        width: 40px;
+        height: auto;
+    }
+}
 header {
     background-color: white;
     width: 100%;

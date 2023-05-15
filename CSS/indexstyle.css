@@ -12,24 +12,28 @@
 .bodynav{grid-area: textview; background-color: #ffd6ac;}
 .footer{grid-area:footer;background-color: white;}
 /*Lineas de corte*/
-@media only screen and (min-width: 1920px) {
-    .promo_qr,.caja_nueva_supreme,.caja_graph_supreme{
+@media only screen and (min-width: 1920px) {  
+    h2{
+        font-size: 35px;
+        text-align: center;
+    }
+    h3{
+        font-size: 30px;
+        text-align: center;
+    }
+    img{
+        max-width: 550px;
+    }
+    a{
+        font-size: 25px;
+    }
+    .caja_nueva_supreme{
         flex-direction: row;
-        align-content: center;
-    }
-    .texto_supreme{
-        order: 2;
-    }
-    .img_supreme{
-        order: 1;
-    }
-    .present_supreme{
-        order: 1;
-        text-align: right;
+        justify-content: space-around;
     }
 }
 @media only screen and (max-width: 1280px) {
-    .promo_qr,.caja_nueva_supreme,.caja_graph_supreme{
+    .promo_qr,.caja_nueva_supreme{
         flex-direction: row;
         align-content: center;
         align-content: center;
@@ -44,13 +48,25 @@
         order: 1;
         text-align: right;
     }
+    .botonp{
+        order:2;
+    }
 }
 @media only screen and (max-width: 800px) {
-    .promo_qr,.caja_nueva_supreme,.caja_graph_supreme{
+    .promo_qr,.caja_nueva_supreme{
         flex-direction: column;
         align-items: center;
         text-align: center;
     }
+    .caja_nueva_supreme {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+    .texto_supreme {
+        width: 100%;
+        text-align: center;
+      }
     .contene_text{
         order: 1;
     }
@@ -59,6 +75,7 @@
     }
     .caja_img_supreme{
         order: 3;
+        width: 100%;
     }
     h2.present_supreme{
         order: 1;
@@ -78,7 +95,23 @@
         order: 2;
         width: 100%;
         height: auto;
+    }   
+    .promo_qr{
+        margin-bottom: 20px;
     }
+    .botonp{
+        order:2;
+        margin-bottom: 25px;
+    }
+    div.caja_nueva_supreme>div.caja_img_supreme>img.img_supreme,div.caja_horario>img.img_horario{
+        max-width: 300px;
+    }
+}
+/*Centrado*/
+.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 /*Cuerpo de la página*/
 .bodynav{
@@ -118,14 +151,7 @@
     align-content: center;
     
 }
-/*Caja del texto*/
-.contene_text{
-    width: 70%;
-    margin-right: 30px;
-    max-width: 400px;
-    min-width: 200px;
-    text-align: center;
-}
+
 /*Caja del jpg del QR*/
 .contene_qr{
     width: 100%;
@@ -133,11 +159,19 @@
     max-width: 200px;
     border: 5px solid #94C12D;
 }
-.caja_nueva_supreme{
+/*Promo Supreme*/
+.caja_nueva_supreme {
+    display: flex;
     border-top: 4px solid #94C12D;
     border-bottom: 4px solid rgb(13, 17, 28);
-    background-color: rgb(12,15,20,255);
+    background-color: rgb(12, 15, 20, 255);
     border-bottom: 4px solid #D9213F;
+}
+.texto_present_supreme {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .supreme{
     color: #D9213F;
@@ -147,21 +181,32 @@
     padding: 10px;
     line-height: 50px;
 }
-.caja_graph_supreme{
-    display: flex;
-    padding: 10px;
-    align-items: center;
-    align-content:center;
-}
-.texto_supreme{
+.texto_supreme {
     width: 50%;
     margin-left: 20px;
     max-width: 400px;
     min-width: 200px;
-    text-align: center;
+}
+/*Botón PROBALA*/
+.probala{
+    color: white;
+    text-decoration: none;
+    background-color: #D9213F;
+    padding: 2px;
+    border-radius: 6px;
+}
+.botonp{
+    justify-items: center;
+}
+.probala:hover{
+    padding-left: 40px;
+    padding-right: 40px;
+    transition-property: all;
+    transition-duration: 0.4s;
 }
 .caja_img_supreme{
-    width: 50%;
+    flex: 1;
+    align-items: center;
 }
 .img_supreme{
     width: 100%;
@@ -170,20 +215,7 @@
 .white{
     color: whitesmoke;
 }
-.probala{
-    color: white;
-    margin-bottom: 25px;
-    text-decoration: none;
-    background-color: #D9213F;
-    padding: 2px;
-    border-radius: 6px;
-}
-.probala:hover{
-    padding-left: 40px;
-    padding-right: 40px;
-    transition-property: all;
-    transition-duration: 0.4s;
-}
+/*Caja CAMBIO DE HORARIO*/
 .caja_horario{
     display: flex;
     padding-top: 15px;
@@ -200,4 +232,7 @@
 }
 .subwavy{
     text-decoration: underline 3px;
+}
+.id{
+
 }
