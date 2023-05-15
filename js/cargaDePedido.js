@@ -17,19 +17,23 @@ function cargaDePedido() {
 
 
 
-    for (var i = 0; i < divPedidoActivo.length; i++) {
+    for (var i = 4; i < 41;) {
 
 
         if (divPedidoActivo[i].innerText != "" && divPedidoActivo[i].innerText != "VACIAR CARRITO") {
 
-            pedidoAenviar = pedidoAenviar + "<br>" + divPedidoActivo[i].innerText
+            pedidoAenviar = pedidoAenviar + "<br>" + divPedidoActivo[i].innerText + " " + divPedidoActivo[i+1].innerText + "   " + divPedidoActivo[i+2].innerText
         }
         
-        sessionStorage.setItem('pedido', pedidoAenviar);
+        
         console.log(sessionStorage.getItem('pedido'))
+        i = i+3;
 
 
     }
+    pedidoAenviar = pedidoAenviar + "<br>" + divPedidoActivo[41].innerText + " " + divPedidoActivo[42].innerText
+    sessionStorage.setItem('pedido', pedidoAenviar);
+
     
     
 
