@@ -20,7 +20,7 @@ table,
         
     }
 /*DEFINICIÓN Y CONFIGURACIÓN DEL GRID*/
-.contenedorPediddo{
+.contenedorindex{
     display: grid;
     grid-template-rows: 70px 40px auto 80px;
     grid-template-areas:"encabezado"
@@ -41,6 +41,12 @@ table,
 .subt{
     text-align: center;
 }
+
+.subrayado{
+    text-decoration: underline wavy #94C12D;
+  }
+
+
 .contanos{
     color: white;
     margin-left: 25px;
@@ -206,8 +212,3 @@ nav a:hover:nth-child(even) {
 .linkbar2:hover{
     font-size: larger;
 }
-
-
-.subrayado{
-    text-decoration: underline wavy #94C12D;
-  }

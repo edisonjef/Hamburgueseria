@@ -23,7 +23,7 @@ function validarFormulario(evento) {
         return;
       }
       envioMail();
-      //alert("Gracias por enviar su comentario!!")
+      alert("Gracias por enviar su comentario!!")
       this.submit();
       
       
