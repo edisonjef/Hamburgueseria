@@ -6,7 +6,6 @@
     "barnav"
     "cuerpo"
     "footer";
-
 }
 /*Lineas de Corte*/
 @media only screen and (min-width: 1920px){
@@ -22,7 +21,7 @@
     font-size: 20px;
     text-align: center;
     justify-items: center;
-    max-width: 400px;
+    max-width: 300px;
   }
   img.imgflexd,img.imgflexi{
     max-width: 300px;
@@ -30,7 +29,7 @@
     margin-bottom: 20px;
   }
   .tabla{
-    max-width: 500px;
+    max-width: 300px;
     margin: 0 auto;
     padding: 5px;
     gap: 2px;
@@ -42,21 +41,14 @@
     align-items: center;
     text-align: center;
   }
-  .header2,
-  .itemt,
-  .calories,
-  .fats,
-  .carbs,
-  .proteins {
-    font-size: 14px;
+  .itemt {
+    width: 80px;
+    height:auto;
+    overflow: scroll;
   }
-
   .tabla > * {
     padding: 3px;
   }
-
-  .tabla,
-  .itemt,
   .calories,
   .fats,
   .carbs,
@@ -64,6 +56,7 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    font-size: 14px;
   }
 }
 /*Caja Títulos*/
@@ -103,9 +96,12 @@
   text-align: center;
   margin-bottom: 15px;
   margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
   padding: 15px;
   gap: 4px;
   border-color: black;
+  
 }
 
 .header2 {
