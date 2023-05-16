@@ -44,6 +44,31 @@ header {
     padding: 5px;
 }
 
+header:hover img {
+    animation: bounce 2.5s;
+}
+
+@keyframes bounce {
+    0% {
+        transform: scaleX(1);
+    }
+    20% {
+        transform: scaleX(2);
+    }
+    40% {
+        transform: scaleX(1);
+    }
+    60% {
+        transform: scaleX(1.2);
+    }
+    80% {
+        transform: scaleX(0.9);
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}
+
 footer {
     background-color: white;
     text-align: center;
