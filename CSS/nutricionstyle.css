@@ -21,7 +21,7 @@
     font-size: 20px;
     text-align: center;
     justify-items: center;
-    max-width: 400px;
+    max-width: 300px;
   }
   img.imgflexd,img.imgflexi{
     max-width: 300px;
@@ -29,7 +29,7 @@
     margin-bottom: 20px;
   }
   .tabla{
-    max-width: 500px;
+    max-width: 300px;
     margin: 0 auto;
   }
   div.contenedor_nutri > div.item.desarrollo > p{
