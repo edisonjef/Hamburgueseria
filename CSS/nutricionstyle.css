@@ -9,6 +9,34 @@
 }
 /*Lineas de Corte*/
 @media only screen and (min-width: 1920px){
+  h2{
+    font-size: 40px;
+  }
+  p.centrado{
+    font-size: 30px;
+    max-width: 900px;
+    margin-bottom: 20px;
+  }
+  h1{
+    font-size: 80px;
+  }
+  img.imgflexd,img.imgflexi{
+    max-width: 400px;
+  }
+  div.header2{
+    font-size: 37px;
+  }
+  .tabla{
+    font-size: 25px;
+    margin-right: auto;
+    margin-left: auto;
+    gap: 4px;
+  }
+  .parra{
+    font-size: 25px;
+    align-items: center;
+    text-align: center;
+  }
 }
 @media only screen and (max-width: 1280px) {
 }
@@ -154,6 +182,8 @@
 }
 .lechuga,.tomate,.pan{
   display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 .lechuga{
   border-top: 3px dashed #94C12D;
