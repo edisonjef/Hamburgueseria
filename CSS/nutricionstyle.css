@@ -18,6 +18,36 @@
     flex-direction: column;
     align-items: center;
   }
+  div.desarrollo > div.intron > p.centrado{
+    font-size: 20px;
+    text-align: center;
+    justify-items: center;
+    max-width: 400px;
+  }
+  img.imgflexd,img.imgflexi{
+    max-width: 300px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .tabla{
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  div.contenedor_nutri > div.item.desarrollo > p{
+    max-width: 300px;
+  }
+  .parra{
+    align-items: center;
+    text-align: center;
+  }
+}
+/*Caja Títulos*/
+.intron{
+    width: 100%;
+    height: auto;  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 /*Otros ajustes*/
 .header {
@@ -135,4 +165,8 @@
   width: 50%;
   float: right;
   margin-right: 25px;
+}
+.parra{
+  width: 100%;
+  height: auto;
 }
