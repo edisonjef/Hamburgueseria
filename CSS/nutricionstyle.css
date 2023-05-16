@@ -41,6 +41,29 @@
     align-items: center;
     text-align: center;
   }
+  .header2,
+  .itemt,
+  .calories,
+  .fats,
+  .carbs,
+  .proteins {
+    font-size: 14px;
+  }
+
+  .tabla > * {
+    padding: 3px;
+  }
+
+  .tabla,
+  .itemt,
+  .calories,
+  .fats,
+  .carbs,
+  .proteins {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }
 /*Caja Títulos*/
 .intron{
