@@ -31,6 +31,8 @@
   .tabla{
     max-width: 300px;
     margin: 0 auto;
+    padding: 5px;
+    gap: 2px;
   }
   div.contenedor_nutri > div.item.desarrollo > p{
     max-width: 300px;
