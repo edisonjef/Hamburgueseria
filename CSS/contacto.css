@@ -50,10 +50,20 @@
 
 .table_clima{
     margin:auto;
-    padding-top: 10px;
+    
 
 }
 
+th,
+td,
+tr {
+
+    color: #F28D28;
+    text-align: center;
+    padding-left: 1em;
+    
+
+}
 /*ANIMACIONES*/
 
 button:hover:nth-child(odd) {
@@ -65,17 +75,7 @@ button:hover:nth-child(odd) {
     transition-duration: 0.3s;
 }
 
-th,
-td,
-tr {
 
-    color: #F28D28;
-    text-align: center;
-    padding-left: 1em;
- 
-  
-
-}
 
 /*DEFINICIÓN Y CONFIGURACIÓN DEL GRID*/
 .contenedorContacto {
