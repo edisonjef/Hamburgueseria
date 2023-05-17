@@ -1,214 +1,111 @@
+.form {
+    background-color: #F28D28 ;
+    margin: auto;
+    width: 90%;
+    max-width: 400px;
+    padding: 4.5em 3em;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px -5px rgb(0 0 0 /30%);
+    text-align: center;
+}
+
+.form_container{
+    margin-top: 3em;
+    display:grid;
+    gap: 1em;
+
+}
+
+.form_group{
+    position: relative;
+    color: #F28D28;
+
+}
+
+.form_imput{
+    width: 100%;
+    font-size: 1rem;
+    padding: .6em .3em;
+    border: 1px solid #94C12D;
+}
+
+.form_label{
+    font-family: Poppins;
+}
+
+.form.title{
+    font-size: 2rem;
+    margin-bottom: .5em;
+
+
+}
+
 /*ANIMACIONES*/
+
 button:hover:nth-child(odd) {
     color: rgb(255, 255, 255);
-    background-color:#D9213F;
-    border-radius:6px;
+    background-color: #D9213F;
+    border-radius: 6px;
     font-weight: bold;
     transition-property: all;
     transition-duration: 0.3s;
 }
+
 table,
-    th,
-    td,
-    tr {
-        
-        color: #F28D28;
-        text-align: center;
-        padding-left: 1em;
-        margin: auto;
-        margin-top: 1em;
-        
-    }
+th,
+td,
+tr {
+
+    color: #F28D28;
+    text-align: center;
+    padding-left: 1em;
+    margin: auto;
+    margin-top: 1em;
+
+}
+
 /*DEFINICIÓN Y CONFIGURACIÓN DEL GRID*/
-.contenedorindex{
+.contenedorContacto {
     display: grid;
     grid-template-rows: 70px 40px auto 80px;
-    grid-template-areas:"encabezado"
-                        "barnav"
-                        "textview"
-                        "footer" ;
-}
-.header{ grid-area: encabezado; background-color: white;}
-.barnav{grid-area: barnav; background-color:#F28D28;}
-.textview{grid-area: textview; background-color: #ffd6ac;}
-.footer{grid-area:footer;background-color: white;}
-/*Cuerpo de la página*/
-.textview{
-    margin-left: -8px;
-    margin-right: -10px;
-}
-/*---sin <pies> ni <cabeza>---*/
-.subt{
-    text-align: center;
+    grid-template-areas: "encabezado"
+        "barnav"
+        "textview"
+        "footer";
 }
 
-.subrayado{
-    text-decoration: underline wavy #94C12D;
-  }
-
-
-.contanos{
-    color: white;
-    margin-left: 25px;
-    text-decoration: none;
-    background-color: #D9213F;
-    border-radius: 6px;
-    padding: 3px;
-}
-.contanos:hover{
-    font-size: large;
-    font-weight: bold;
-    transition-property: all;
-    transition-duration: 0.4s;
-}
-.promoqr{
-    display: flex;
-    padding: 10px;
-    align-items: center;
-    align-content: center;
-}
-.contenetext{
-    width: 70%;
-    margin-right: 30px;
-    max-width: 400px;
-}
-.conteneqr{
-    width: 100%;
-    height: auto;
-    max-width: 200px;
-    border: 5px solid #94C12D;
-}
-
-/*
-Rojo #D9213F/Naranja #F28D28/
-Naranja Claro #ffd6ac/Verde #94C12D
-sabor sin &lt; pies &gt; ni &lt; cabeza &gt;
-*/
-@font-face {
-    font-family: AristaPro;
-    src: url("/Media/Arista-Pro-Fat-trial.ttf");
-}
-@font-face {
-    font-family: Poppins;
-    src: url("/Media/Poppins-Regular.ttf");
-}
-@font-face {
-    font-family: PoppinsThin;
-    src: url("/Media/Poppins-Thin.ttf");
-}
-* {
-    font-family: Poppins;
-    color: black;
-}
-header {
+.header {
+    grid-area: encabezado;
     background-color: white;
-    width: 100%;
-    height: 70px;
-    margin: -8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 5px;
-}
-
-footer {
-    background-color: white;
-    text-align: center;
-    margin-left: -8px;
-    margin-right: -10px;
-    margin-top: 15px;
-    border-top:4px solid #94C12D;
-}
-
-h1 {
-    font-family: AristaPro;
-    color: #D9213F;
-    font-size: 40px;
-    text-align: center;
-}
-h2,p{
-    margin-left: 25px;
-}
-
-.cimg {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    align-self: center;
 }
 
 .barnav {
-    margin-left: -8px;
-    margin-right: -10px;
-    border-bottom: 4px solid #94C12D;
-    border-top: 4px solid #94C12D;
-    display: flex;
-    justify-content: space-evenly;
-    overflow: scroll;
-}
-.barnav::-webkit-scrollbar{
-    display: none;
+    grid-area: barnav;
+    background-color: #F28D28;
 }
 
-.linkbar {
-    object-fit: contain;
-    align-self: center;
-    text-decoration: none;
-    padding-right: 4px;
-    padding-left: 4px;
+.textview {
+    grid-area: textview;
+    background-color: #ffd6ac;
+    padding-bottom: 30px;
 }
 
-.linkbar2 {
-    background-color: #D9213F;
-    color: white;
-    object-fit: contain;
-    align-self: center;
-    text-decoration: none;
-    padding-right: 4px;
-    padding-left: 4px;
-}
-
-.iconos-footer img {
-    width: 25px;
-    height: 25px;
-    margin: 5px;
-}
-
-.derechos-reservados {
-    font-size: 14px;
-    color: #000000;
+.footer {
+    grid-area: footer;
     background-color: white;
 }
-.verde{
-    color: #94C12D;
-}
-.naranja{
-    color: #F28D28;
-}
-.rojo{
-    color: #D9213F;
-}
-.poppins{
-    font-family: PoppinsThin;
-}
-/*ANIMACIONES*/
-nav a:hover:nth-child(odd) {
-    color: rgb(255, 255, 255);
-    background-color:#D9213F;
-    border-radius:6px;
-    font-weight: bold;
-    transition-property: all;
-    transition-duration: 0.4s;
+
+/*Cuerpo de la página*/
+.textview {
+    margin-left: -8px;
+    margin-right: -10px;
 }
 
-nav a:hover:nth-child(even) {
-    color: rgb(255, 255, 255);
-    background-color:#94C12D;
-    border-radius: 6px;
-    font-weight: bold;
-    transition-property: all;
-    transition-duration: 0.4s;
+/*---sin <pies> ni <cabeza>---*/
+.subt {
+    text-align: center;
 }
-.linkbar2:hover{
-    font-size: larger;
+
+.subrayado {
+    text-decoration: underline wavy #94C12D;
 }
