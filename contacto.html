@@ -15,7 +15,7 @@
 </head>
 
 <body>
-  <div class="contenedorindex">
+  <div class="contenedorContacto">
     <header>
       <img class="cimg" src="/Media/Logo hor white.png" alt="Logo VisualBurger">
     </header>
@@ -28,20 +28,23 @@
     </nav>
     <div class="item textview">
       <h1 class="subrayado">CONTACTO</h1>
-      <form class="container" id="contacto" >
-        <div class="mb-3">
-          <label for="email" class="form-label" ;">Email</label>
-          <input type="text" class="form-control" id="email" aria-describedby="emailHelp">
-          <div id="emailHelp" class="form-text">Ingresar un mail valido</div>
-        </div>
-        <div class="mb-3">
-          <label for="comentario">Comentarios:</label>
-          <textarea class="form-control rounded-0" id="comentarios" rows="3"></textarea>
-        </div>
-        <button type="submit" class="btn"  
-          style=" border:2px solid #94C12D ;margin: 10px; margin-left: 0px;">Enviar</button>
+      <form class="form" id="contacto">
+
+          <div class="form_container">
+              <div class="form_group">
+                  <label for="email" class="form_label" ;">Email</label>
+                  <input type="text" class="form_imput" id="email" aria-describedby="emailHelp">
+              </div>
+              <div class="form_group">
+                  <label for="comentario" class="form_label">Comentarios:</label>
+                  <textarea class="form_imput" id="comentarios" rows="3"></textarea>
+              </div>
+              <button type="submit" class="form_submit"
+                  style=" border:2px solid #94C12D ;margin: 10px; margin-left: 0px;">Enviar</button>
+          </div>
+
       </form>
-    </div>
+  </div>
 
     <div>
       <table>
