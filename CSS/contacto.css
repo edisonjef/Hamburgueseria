@@ -26,11 +26,19 @@
     width: 100%;
     font-size: 1rem;
     padding: .6em .3em;
-    border: 1px solid #94C12D;
+    border: 1px   solid #94C12D;
+    border-radius: 10px;
+    
 }
 
 .form_label{
     font-family: Poppins;
+}
+
+.form_submit{
+    border-radius: 5px;
+    border:1px solid #94C12D ;
+
 }
 
 .form.title{

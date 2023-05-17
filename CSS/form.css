@@ -124,7 +124,7 @@ button:hover:nth-child(odd) {
 }
 
 /*DEFINICIÓN Y CONFIGURACIÓN DEL GRID*/
-.contenedorPediddo{
+.contenedorPedido{
     display: grid;
     grid-template-rows: 70px 40px auto 80px;
     grid-template-areas:"encabezado"

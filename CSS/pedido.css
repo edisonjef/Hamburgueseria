@@ -1,13 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
-
-body {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  background-color: white;
-  font-family: "lato", sans-serif;
-}
 
 .signupFrm {
   display: flex;
@@ -18,7 +9,7 @@ body {
 
 
 .form {
-  background-color: white;
+  background-color: #F28D28;
   width: 300px;
   border-radius: 8px;
   padding: 20px 40px;
@@ -58,8 +49,8 @@ body {
   top: 15px;
   left: 15px;
   padding: 0 4px;
-  background-color: white;
-  color: #DADCE0;
+  background-color: none;
+  color: #15ad12;
   font-size: 16px;
   transition: 0.5s;
   z-index: 0;
