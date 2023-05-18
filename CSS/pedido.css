@@ -50,7 +50,7 @@
   left: 15px;
   padding: 0 4px;
   background-color: none;
-  color: #15ad12;
+  color: white;
   font-size: 16px;
   transition: 0.5s;
   z-index: 0;
@@ -83,7 +83,7 @@
   z-index: 10;
   font-size: 14px;
   font-weight: 600;
-  color:  #D9213F;
+  color:  black ;
 }
 
 .input:not(:placeholder-shown)+ .label {
@@ -95,5 +95,5 @@
 }
 
 .input:focus {
-  border: 2px solid #94C12D;
+  border: none;
 }
