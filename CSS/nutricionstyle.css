@@ -9,6 +9,9 @@
 }
 /*Lineas de Corte*/
 @media only screen and (min-width: 1920px){
+  h1{
+    font-size: 36px;
+  }
   h2{
     font-size: 40px;
   }

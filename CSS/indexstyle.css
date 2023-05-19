@@ -13,6 +13,9 @@
 .footer{grid-area:footer;background-color: white;}
 /*Lineas de corte*/
 @media only screen and (min-width: 1920px) {  
+    h1{
+        font-size: 36px;
+    }
     h2{
         font-size: 35px;
         text-align: center;
@@ -30,6 +33,21 @@
     .caja_nueva_supreme{
         flex-direction: row;
         justify-content: space-around;
+    }
+    div.contene_text{
+        max-width: 700px;
+    }
+    div.promoqr{
+        justify-content: space-around;  
+    }
+    .descarga{
+        font-size: 35px;
+    }
+    div.caja_nueva-supreme{
+        justify-content:space-between;
+    }
+    img.img_supreme{
+        max-width: 400px;
     }
 }
 @media only screen and (max-width: 1280px) {
