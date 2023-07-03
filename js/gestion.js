@@ -22,7 +22,7 @@ const app = Vue.createApp({
             fetch(`https://apiedison.pythonanywhere.com/productos/${this.consultaCodigo}`)
                 .then(response => response.json())
                 .then(producto => {
-                    if (producto) {
+                    if (producto.codigo) {
                         this.consultaResultado = `
                             <table>
                                 <tr>
