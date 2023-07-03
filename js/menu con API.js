@@ -502,8 +502,9 @@ fetch(URL + 'productos')
       modifica_stock(pedido);
       console.log('stock modificado');
 
-      cargaDePedido();
-      window.location.href = "/formEnvioPedido.html";
+      //cargaDePedido();
+
+      //window.location.href = "/formEnvioPedido.html";
     });
 
 
