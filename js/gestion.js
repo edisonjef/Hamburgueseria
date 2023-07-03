@@ -73,7 +73,7 @@ const app = Vue.createApp({
                                 this.altaStock = '';
                                 this.altaPrecio = '';
                                 this.listarProductos();
-                                this.altaResultado = JSON.stringify(producto);
+                                this.altaResultado = JSON.stringify(producto.mensaje);
                             });
                     } else {
                         this.altaResultado = 'Alta no efectuada';
