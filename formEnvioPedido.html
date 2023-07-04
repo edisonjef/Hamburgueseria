@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>| Pedido |-Visual Burgers-</title>
+  <link rel="stylesheet" href="/CSS/pedido.css">
+  <link rel="stylesheet" href="/CSS/form.css">
+  <link rel="stylesheet" href="/CSS/styles.css">
+
+  <link rel="shortcut icon" href="/Media/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+  <div class="contenedorPedido">
+    <header>
+      <img class="cimg" src="/Media/Logo hor white.png" alt="">
+    </header>
+
+    <nav class="barnav">
+      <a class="linkbar2" href="menu.html">MENÚ</a>
+    </nav>
+    <div class=" item textview">
+      <h1 class="subrayado">Pedido</h1>
+      <div class="signupFrm">
+        <div class="wrapper">
+          <form action="" class="form" id="formPedido">
+            <div class="inputContainer">
+              <input type="text" class="input" placeholder="a" id="nombreApellido" required>
+              <label for="" class="label">Nombre y Apellido</label>
+            </div>
+
+            <div class="inputContainer">
+              <input type="text" class="input" placeholder="a" id="direccion" required>
+              <label for="" class="label">Direccion</label>
+            </div>
+
+            <div class="inputContainer">
+              <input type="text" class="input" placeholder="a" id="telefono" required>
+              <label for="" class="label">Telefono</label>
+            </div>
+            <div class="inputContainer">
+              <input type="text" class="input" placeholder="a" id="email" required>
+              <label for="" class="label">Email</label>
+            </div>
+
+
+            <button class="submitBtn" value="Pedir">Pedir</button>
+          </form>
+        </div>
+      </div>
+
+
+    </div>
+
+    <footer style="margin-top: 2em;">
+      <div class="iconos-footer">
+        <img src="/Media/IG.png" alt="Icono 1">
+        <img src="/Media/wpp.png" alt="Icono 2">
+        <img src="/Media/PY.png" alt="Icono 3">
+      </div>
+      <p class="derechos-reservados">Derechos reservados 2024</p>
+    </footer>
+
+
+
+
+
+
+  </div>
+
+  <script src="/js/envioMailPedido.js"></script>
+  <script src="/js/menu.js"></script>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+
+
+
+</body>
+
+</html>
