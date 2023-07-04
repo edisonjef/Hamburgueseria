@@ -16,92 +16,117 @@ fetch(URL + 'productos')
 
     // De cada producto, obtengo el nombre y el precio y los inserto en el HTML
 
-    const resultado_1 = document.getElementById('producto_1');
-    const resultadoP_1 = document.getElementById('precio_1');
-    resultado_1.textContent = data[0].nombre;
-    resultadoP_1.textContent = "$ " + data[0].precio;
 
-    const resultado_2 = document.getElementById('producto_2');
-    const resultadoP_2 = document.getElementById('precio_2');
-    resultado_2.textContent = data[1].nombre;
-    resultadoP_2.textContent = "$ " + data[1].precio;
+    if (data[0] !== undefined) {
+      const resultado_1 = document.getElementById('producto_1');
+      const resultadoP_1 = document.getElementById('precio_1');
+      resultado_1.textContent = data[0].descripcion;
+      resultadoP_1.textContent = "$ " + data[0].precio;
+    }
 
-    const resultado_3 = document.getElementById('producto_3');
-    const resultadoP_3 = document.getElementById('precio_3');
-    resultado_3.textContent = data[2].nombre;
-    resultadoP_3.textContent = "$ " + data[2].precio;
+    if (data[1] !== undefined) {
+      const resultado_2 = document.getElementById('producto_2');
+      const resultadoP_2 = document.getElementById('precio_2');
+      resultado_2.textContent = data[1].descripcion;
+      resultadoP_2.textContent = "$ " + data[1].precio;
+    }
 
-    const resultado_4 = document.getElementById('producto_4');
-    const resultadoP_4 = document.getElementById('precio_4');
-    resultado_4.textContent = data[3].nombre;
-    resultadoP_4.textContent = "$ " + data[3].precio;
+    if (data[2] !== undefined) {
+      const resultado_3 = document.getElementById('producto_3');
+      const resultadoP_3 = document.getElementById('precio_3');
+      resultado_3.textContent = data[2].descripcion;
+      resultadoP_3.textContent = "$ " + data[2].precio;
+    }
 
-    const resultado_5 = document.getElementById('producto_5');
-    const resultadoP_5 = document.getElementById('precio_5');
-    resultado_5.textContent = data[4].nombre;
-    resultadoP_5.textContent = "$ " + data[4].precio;
+    if (data[3] !== undefined) {
+      const resultado_4 = document.getElementById('producto_4');
+      const resultadoP_4 = document.getElementById('precio_4');
+      resultado_4.textContent = data[3].descripcion;
+      resultadoP_4.textContent = "$ " + data[3].precio;
+    }
 
-    const resultado_6 = document.getElementById('producto_6');
-    const resultadoP_6 = document.getElementById('precio_6');
-    resultado_6.textContent = data[5].nombre;
-    resultadoP_6.textContent = "$ " + data[5].precio;
+    if (data[4] !== undefined) {
+      const resultado_5 = document.getElementById('producto_5');
+      const resultadoP_5 = document.getElementById('precio_5');
+      resultado_5.textContent = data[4].descripcion;
+      resultadoP_5.textContent = "$ " + data[4].precio;
+    }
 
-    const resultado_7 = document.getElementById('producto_7');
-    const resultadoP_7 = document.getElementById('precio_7');
-    resultado_7.textContent = data[6].nombre;
-    resultadoP_7.textContent = "$ " + data[6].precio;
+    if (data[5] !== undefined) {
+      const resultado_6 = document.getElementById('producto_6');
+      const resultadoP_6 = document.getElementById('precio_6');
+      resultado_6.textContent = data[5].descripcion;
+      resultadoP_6.textContent = "$ " + data[5].precio;
+    }
 
-    const resultado_8 = document.getElementById('producto_8');
-    const resultadoP_8 = document.getElementById('precio_8');
-    resultado_8.textContent = data[7].nombre;
-    resultadoP_8.textContent = "$ " + data[7].precio;
+    if (data[6] !== undefined) {
+      const resultado_7 = document.getElementById('producto_7');
+      const resultadoP_7 = document.getElementById('precio_7');
+      resultado_7.textContent = data[6].descripcion;
+      resultadoP_7.textContent = "$ " + data[6].precio;
+    }
 
-    const resultado_9 = document.getElementById('producto_9');
-    const resultadoP_9 = document.getElementById('precio_9');
-    resultado_9.textContent = data[8].nombre;
-    resultadoP_9.textContent = "$ " + data[8].precio;
+    if (data[7] !== undefined) {
+      const resultado_8 = document.getElementById('producto_8');
+      const resultadoP_8 = document.getElementById('precio_8');
+      resultado_8.textContent = data[7].descripcion;
+      resultadoP_8.textContent = "$ " + data[7].precio;
+    }
 
-    const resultado_10 = document.getElementById('producto_10');
-    const resultadoP_10 = document.getElementById('precio_10');
-    resultado_10.textContent = data[9].nombre;
-    resultadoP_10.textContent = "$ " + data[9].precio;
+    if (data[8] !== undefined) {
+      const resultado_9 = document.getElementById('producto_9');
+      const resultadoP_9 = document.getElementById('precio_9');
+      resultado_9.textContent = data[8].descripcion;
+      resultadoP_9.textContent = "$ " + data[8].precio;
 
+    }
 
-    const resultado_11 = document.getElementById('producto_11');
-    const resultadoP_11 = document.getElementById('precio_11');
-    resultado_11.textContent = data[10].nombre;
-    resultadoP_11.textContent = "$ " + data[10].precio;
+    if (data[9] !== undefined) {
+      const resultado_10 = document.getElementById('producto_10');
+      const resultadoP_10 = document.getElementById('precio_10');
+      resultado_10.textContent = data[9].descripcion;
+      resultadoP_10.textContent = "$ " + data[9].precio;
 
-    const resultado_12 = document.getElementById('producto_12');
-    const resultadoP_12 = document.getElementById('precio_12');
-    resultado_12.textContent = data[11].nombre;
-    resultadoP_12.textContent = "$ " + data[11].precio;
+    }
 
+    if (data[10] !== undefined) {
+      const resultado_11 = document.getElementById('producto_11');
+      const resultadoP_11 = document.getElementById('precio_11');
+      resultado_11.textContent = data[10].descripcion;
+      resultadoP_11.textContent = "$ " + data[10].precio;
+    }
+
+    if (data[11] !== undefined) {
+      const resultado_12 = document.getElementById('producto_12');
+      const resultadoP_12 = document.getElementById('precio_12');
+      resultado_12.textContent = data[11].descripcion;
+      resultadoP_12.textContent = "$ " + data[11].precio;
+    }
     if (data[12] !== undefined) {
       const resultado_13 = document.getElementById('producto_13');
       const resultadoP_13 = document.getElementById('precio_13');
-      resultado_13.textContent = data[12].nombre;
+      resultado_13.textContent = data[12].descripcion;
       resultadoP_13.textContent = "$ " + data[12].precio;
     }
 
     if (data[13] !== undefined) {
       const resultado_14 = document.getElementById('producto_14');
       const resultadoP_14 = document.getElementById('precio_14');
-      resultado_14.textContent = data[13].nombre;
+      resultado_14.textContent = data[13].descripcion;
       resultadoP_14.textContent = "$ " + data[13].precio;
     }
 
     if (data[14] !== undefined) {
       const resultado_15 = document.getElementById('producto_15');
       const resultadoP_15 = document.getElementById('precio_15');
-      resultado_15.textContent = data[14].nombre;
+      resultado_15.textContent = data[14].descripcion;
       resultadoP_15.textContent = "$ " + data[14].precio;
     }
 
     if (data[15] !== undefined) {
       const resultado_16 = document.getElementById('producto_16');
       const resultadoP_16 = document.getElementById('precio_16');
-      resultado_16.textContent = data[15].nombre;
+      resultado_16.textContent = data[15].descripcion;
       resultadoP_16.textContent = "$ " + data[15].precio;
     }
 
@@ -132,114 +157,126 @@ fetch(URL + 'productos')
       mensajeSinStock_1.style.display = 'block';
     }
 
-    // Obtenemos la referencia del botón
-    var boton2 = document.getElementById('2');
-    var mensajeSinStock_2 = document.getElementById('sin-stock-2');
+    if (data[1] !== undefined) {
+      // Obtenemos la referencia del botón
+      var boton2 = document.getElementById('2');
+      var mensajeSinStock_2 = document.getElementById('sin-stock-2');
 
-    if (data[1].stock == 0) {
-      // Oculta el botón
-      boton2.style.display = 'none';
-      mensajeSinStock_2.style.display = 'block';
+      if (data[1].stock == 0) {
+        // Oculta el botón
+        boton2.style.display = 'none';
+        mensajeSinStock_2.style.display = 'block';
+      }
     }
+    if (data[2] !== undefined) {
+      // Obtenemos la referencia del botón
+      var boton3 = document.getElementById('3');
+      var mensajeSinStock_3 = document.getElementById('sin-stock-3');
 
-    // Obtenemos la referencia del botón
-    var boton3 = document.getElementById('3');
-    var mensajeSinStock_3 = document.getElementById('sin-stock-3');
-
-    if (data[2].stock == 0) {
-      // Oculta el botón
-      boton3.style.display = 'none';
-      mensajeSinStock_3.style.display = 'block';
+      if (data[2].stock == 0) {
+        // Oculta el botón
+        boton3.style.display = 'none';
+        mensajeSinStock_3.style.display = 'block';
+      }
     }
+    if (data[3] !== undefined) {
+      // Obtenemos la referencia del botón
+      var boton4 = document.getElementById('4');
+      var mensajeSinStock_4 = document.getElementById('sin-stock-4');
 
-    // Obtenemos la referencia del botón
-    var boton4 = document.getElementById('4');
-    var mensajeSinStock_4 = document.getElementById('sin-stock-4');
-
-    if (data[3].stock == 0) {
-      // Oculta el botón
-      boton4.style.display = 'none';
-      mensajeSinStock_4.style.display = 'block';
+      if (data[3].stock == 0) {
+        // Oculta el botón
+        boton4.style.display = 'none';
+        mensajeSinStock_4.style.display = 'block';
+      }
     }
+    if (data[4] !== undefined) {
+      // Obtenemos la referencia del botón
+      var boton5 = document.getElementById('5');
+      var mensajeSinStock_5 = document.getElementById('sin-stock-5');
 
-    // Obtenemos la referencia del botón
-    var boton5 = document.getElementById('5');
-    var mensajeSinStock_5 = document.getElementById('sin-stock-5');
-
-    if (data[4].stock == 0) {
-      // Oculta el botón
-      boton5.style.display = 'none';
-      mensajeSinStock_5.style.display = 'block';
+      if (data[4].stock == 0) {
+        // Oculta el botón
+        boton5.style.display = 'none';
+        mensajeSinStock_5.style.display = 'block';
+      }
     }
+    if (data[5] !== undefined) {
+      // Obtenemos la referencia del botón
+      var boton6 = document.getElementById('6');
+      var mensajeSinStock_6 = document.getElementById('sin-stock-6');
 
-    // Obtenemos la referencia del botón
-    var boton6 = document.getElementById('6');
-    var mensajeSinStock_6 = document.getElementById('sin-stock-6');
-
-    if (data[5].stock == 0) {
-      // Oculta el botón
-      boton6.style.display = 'none';
-      mensajeSinStock_6.style.display = 'block';
+      if (data[5].stock == 0) {
+        // Oculta el botón
+        boton6.style.display = 'none';
+        mensajeSinStock_6.style.display = 'block';
+      }
     }
+    if (data[6] !== undefined) {
+      // Obtenemos la referencia del botón
+      var boton7 = document.getElementById('7');
+      var mensajeSinStock_7 = document.getElementById('sin-stock-7');
 
-    // Obtenemos la referencia del botón
-    var boton7 = document.getElementById('7');
-    var mensajeSinStock_7 = document.getElementById('sin-stock-7');
-
-    if (data[6].stock == 0) {
-      // Oculta el botón
-      boton7.style.display = 'none';
-      mensajeSinStock_7.style.display = 'block';
+      if (data[6].stock == 0) {
+        // Oculta el botón
+        boton7.style.display = 'none';
+        mensajeSinStock_7.style.display = 'block';
+      }
     }
+    if (data[7] !== undefined) {
+      // Obtenemos la referencia del botón
+      var boton8 = document.getElementById('8');
+      var mensajeSinStock_8 = document.getElementById('sin-stock-8');
 
-    // Obtenemos la referencia del botón
-    var boton8 = document.getElementById('8');
-    var mensajeSinStock_8 = document.getElementById('sin-stock-8');
-
-    if (data[7].stock == 0) {
-      // Oculta el botón
-      boton8.style.display = 'none';
-      mensajeSinStock_8.style.display = 'block';
+      if (data[7].stock == 0) {
+        // Oculta el botón
+        boton8.style.display = 'none';
+        mensajeSinStock_8.style.display = 'block';
+      }
     }
+    if (data[8] !== undefined) {
+      // Obtenemos la referencia del botón
+      var boton9 = document.getElementById('9');
+      var mensajeSinStock_9 = document.getElementById('sin-stock-9');
 
-    // Obtenemos la referencia del botón
-    var boton9 = document.getElementById('9');
-    var mensajeSinStock_9 = document.getElementById('sin-stock-9');
-
-    if (data[8].stock == 0) {
-      // Oculta el botón
-      boton9.style.display = 'none';
-      mensajeSinStock_9.style.display = 'block';
+      if (data[8].stock == 0) {
+        // Oculta el botón
+        boton9.style.display = 'none';
+        mensajeSinStock_9.style.display = 'block';
+      }
     }
+    if (data[9] !== undefined) {
+      // Obtenemos la referencia del botón
+      var boton10 = document.getElementById('10');
+      var mensajeSinStock_10 = document.getElementById('sin-stock-10');
 
-    // Obtenemos la referencia del botón
-    var boton10 = document.getElementById('10');
-    var mensajeSinStock_10 = document.getElementById('sin-stock-10');
-
-    if (data[9].stock == 0) {
-      // Oculta el botón
-      boton10.style.display = 'none';
-      mensajeSinStock_10.style.display = 'block';
+      if (data[9].stock == 0) {
+        // Oculta el botón
+        boton10.style.display = 'none';
+        mensajeSinStock_10.style.display = 'block';
+      }
     }
+    if (data[10] !== undefined) {
+      // Obtenemos la referencia del botón
+      var boton11 = document.getElementById('11');
+      var mensajeSinStock_11 = document.getElementById('sin-stock-11');
 
-    // Obtenemos la referencia del botón
-    var boton11 = document.getElementById('11');
-    var mensajeSinStock_11 = document.getElementById('sin-stock-11');
-
-    if (data[10].stock == 0) {
-      // Oculta el botón
-      boton11.style.display = 'none';
-      mensajeSinStock_11.style.display = 'block';
+      if (data[10].stock == 0) {
+        // Oculta el botón
+        boton11.style.display = 'none';
+        mensajeSinStock_11.style.display = 'block';
+      }
     }
+    if (data[11] !== undefined) {
+      // Obtenemos la referencia del botón
+      var boton12 = document.getElementById('12');
+      var mensajeSinStock_12 = document.getElementById('sin-stock-12');
 
-    // Obtenemos la referencia del botón
-    var boton12 = document.getElementById('12');
-    var mensajeSinStock_12 = document.getElementById('sin-stock-12');
-
-    if (data[11].stock == 0) {
-      // Oculta el botón
-      boton12.style.display = 'none';
-      mensajeSinStock_12.style.display = 'block';
+      if (data[11].stock == 0) {
+        // Oculta el botón
+        boton12.style.display = 'none';
+        mensajeSinStock_12.style.display = 'block';
+      }
     }
     if (data[12] !== undefined) {
       // Obtenemos la referencia del botón
@@ -515,7 +552,7 @@ fetch(URL + 'productos')
       div.style.display = "grid";
 
       if (pedido[0] != 0) {
-        var mensaje = data[0].nombre
+        var mensaje = data[0].descripcion
         var cantidad = pedido[0];
         var div = document.getElementById('pedido1');
         div.innerHTML = mensaje;
@@ -538,7 +575,7 @@ fetch(URL + 'productos')
 
 
       if (pedido[1] != 0) {
-        var mensaje = data[1].nombre;
+        var mensaje = data[1].descripcion;
         var cantidad = pedido[1];
         var div = document.getElementById('pedido2');
         div.innerHTML = mensaje;
@@ -559,7 +596,7 @@ fetch(URL + 'productos')
       }
 
       if (pedido[2] != 0) {
-        var mensaje = data[2].nombre;
+        var mensaje = data[2].descripcion;
         var cantidad = pedido[2];
         var div = document.getElementById('pedido3');
         div.innerHTML = mensaje;
@@ -579,7 +616,7 @@ fetch(URL + 'productos')
       }
 
       if (pedido[3] != 0) {
-        var mensaje = data[3].nombre;
+        var mensaje = data[3].descripcion;
         var cantidad = pedido[3];
         var div = document.getElementById('pedido4');
         div.innerHTML = mensaje;
@@ -599,7 +636,7 @@ fetch(URL + 'productos')
       }
 
       if (pedido[4] != 0) {
-        var mensaje = data[4].nombre;
+        var mensaje = data[4].descripcion;
         var cantidad = pedido[4];
         var div = document.getElementById('pedido5');
         div.innerHTML = mensaje;
@@ -618,7 +655,7 @@ fetch(URL + 'productos')
         total5 = 0;
       }
       if (pedido[5] != 0) {
-        var mensaje = data[5].nombre;
+        var mensaje = data[5].descripcion;
         var cantidad = pedido[5];
         var div = document.getElementById('pedido6');
         div.innerHTML = mensaje;
@@ -637,7 +674,7 @@ fetch(URL + 'productos')
         total6 = 0;
       }
       if (pedido[6] != 0) {
-        var mensaje = data[6].nombre;
+        var mensaje = data[6].descripcion;
         var cantidad = pedido[6];
         var div = document.getElementById('pedido7');
         div.innerHTML = mensaje;
@@ -656,7 +693,7 @@ fetch(URL + 'productos')
         total7 = 0;
       }
       if (pedido[7] != 0) {
-        var mensaje = data[7].nombre;
+        var mensaje = data[7].descripcion;
         var cantidad = pedido[7];
         var div = document.getElementById('pedido8');
         div.innerHTML = mensaje;
@@ -675,7 +712,7 @@ fetch(URL + 'productos')
         total8 = 0;
       }
       if (pedido[8] != 0) {
-        var mensaje = data[8].nombre;
+        var mensaje = data[8].descripcion;
         var cantidad = pedido[8];
         var div = document.getElementById('pedido9');
         div.innerHTML = mensaje;
@@ -694,7 +731,7 @@ fetch(URL + 'productos')
         total9 = 0;
       }
       if (pedido[9] != 0) {
-        var mensaje = data[9].nombre;
+        var mensaje = data[9].descripcion;
         var cantidad = pedido[9];
         var div = document.getElementById('pedido10');
         div.innerHTML = mensaje;
@@ -713,7 +750,7 @@ fetch(URL + 'productos')
         total10 = 0;
       }
       if (pedido[10] != 0) {
-        var mensaje = data[10].nombre;
+        var mensaje = data[10].descripcion;
         var cantidad = pedido[10];
         var div = document.getElementById('pedido11');
         div.innerHTML = mensaje;
@@ -732,7 +769,7 @@ fetch(URL + 'productos')
         total11 = 0;
       }
       if (pedido[11] != 0) {
-        var mensaje = data[11].nombre;
+        var mensaje = data[11].descripcion;
         var cantidad = pedido[11];
         var div = document.getElementById('pedido12');
         div.innerHTML = mensaje;
@@ -752,7 +789,7 @@ fetch(URL + 'productos')
       }
 
       if (pedido[12] != 0) {
-        var mensaje = data[12].nombre;
+        var mensaje = data[12].descripcion;
         var cantidad = pedido[12];
         var div = document.getElementById('pedido13');
         div.innerHTML = mensaje;
@@ -772,7 +809,7 @@ fetch(URL + 'productos')
       }
 
       if (pedido[13] != 0) {
-        var mensaje = data[13].nombre;
+        var mensaje = data[13].descripcion;
         var cantidad = pedido[13];
         var div = document.getElementById('pedido14');
         div.innerHTML = mensaje;
@@ -791,7 +828,7 @@ fetch(URL + 'productos')
         total14 = 0;
       }
       if (pedido[14] != 0) {
-        var mensaje = data[14].nombre;
+        var mensaje = data[14].descripcion;
         var cantidad = pedido[14];
         var div = document.getElementById('pedido15');
         div.innerHTML = mensaje;
@@ -810,7 +847,7 @@ fetch(URL + 'productos')
         total15 = 0;
       }
       if (pedido[15] != 0) {
-        var mensaje = data[15].nombre;
+        var mensaje = data[15].descripcion;
         var cantidad = pedido[15];
         var div = document.getElementById('pedido16');
         div.innerHTML = mensaje;
@@ -842,15 +879,22 @@ fetch(URL + 'productos')
 
     }
 
+
+
+
+
+
+
+
     // Parte para modificar el stock
     // Trae como parametro el array 'pedido'
     function modifica_stock(pedido) {
 
       for (let i = 0; i < 15; i++) {
         if (pedido[i] !== 0) {
-          var cod = i+1;
 
           // Creamos un objeto con los datos del stock actualizados. mantengo los otros atributos igual.
+          if (data[i] !== undefined) {
           var producto = {
             codigo: data[i].codigo,
             descripcion: data[i].descripcion,
@@ -858,9 +902,9 @@ fetch(URL + 'productos')
             precio: data[i].precio,
             stock: (data[i].stock - pedido[i]), // resta al stock la cantidad pedida
           };
-
+        }
           // Realizamos la solicitud PUT al servidor para guardar los cambios
-          fetch(URL + 'productos/' + cod, {
+          fetch(URL + 'productos/' + producto.codigo, {
             method: 'PUT',
             headers: {
               'Content-Type': 'application/json'
@@ -918,19 +962,19 @@ fetch(URL + 'productos')
 
 
 
-          for (var i = 0; i < divPedidoActivo.length; i++) {
+      for (var i = 0; i < divPedidoActivo.length; i++) {
 
 
-              if (divPedidoActivo[i].innerText != "" && divPedidoActivo[i].innerText != "VACIAR CARRITO") {
+        if (divPedidoActivo[i].innerText != "" && divPedidoActivo[i].innerText != "VACIAR CARRITO") {
 
-                  pedidoAenviar = pedidoAenviar + "<br>" + divPedidoActivo[i].innerText
-              }
+          pedidoAenviar = pedidoAenviar + "<br>" + divPedidoActivo[i].innerText
+        }
 
-              sessionStorage.setItem('pedido', pedidoAenviar);
-              console.log(sessionStorage.getItem('pedido'))
+        sessionStorage.setItem('pedido', pedidoAenviar);
+        console.log(sessionStorage.getItem('pedido'))
 
 
-          }
+      }
 
     }
 
