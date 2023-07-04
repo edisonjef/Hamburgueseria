@@ -4,89 +4,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/CSS/styles.css">
-    <link rel="stylesheet" href="/CSS/interno_css.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="interno_css.css">
     <title>Gestión de Productos</title>
 </head>
 
 <body>
     <header>
-        <img class="cimg" src="/Media/Logo hor white.png" alt="Logo de VisualBurger">
+        <img class="cimg" src="Logo hor white.png" alt="Logo de VisualBurger">
     </header>
     <div class="divh1">
         <h1>Gestión de Productos</h1>
-        <button class="botonete" onclick="window.location.href='index.html'">Home</button>
     </div>
-   
     <div id="app">
-        <h2>Listado de Productos</h2>
-        <div class="contenedor-centrado">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Código</th>
-                        <th>Nombre</th>
-                        <th>Descripción</th>
-                        <th>Stock</th>
-                        <th>Precio</th>
-                        <th>Editar</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr v-for="producto in productos" :key="producto.nombre">
-                        <td>{{producto.codigo}}</td>
-                        <td>{{ producto.nombre }}</td>
-                        <td>{{ producto.descripcion }}</td>
-                        <td>{{ producto.stock }}</td>
-                        <td>{{ producto.precio }}</td>
-                        <td><button type="button" @click="editarProducto($index)">Editar</button></td>
-                </tbody>
-            </table>
+        <div id="lista-productos">
+            <h2>Listado de Productos</h2>
+            <div class="contenedor-centrado">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Nombre</th>
+                            <th>Descripción</th>
+                            <th>Stock</th>
+                            <th>Precio</th>
+                            <th>Editar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr v-for="producto in productos" :key="producto.nombre">
+                            <td>{{producto.codigo}}</td>
+                            <td>{{ producto.nombre }}</td>
+                            <td>{{ producto.descripcion }}</td>
+                            <td>{{ producto.stock }}</td>
+                            <td>{{ producto.precio }}</td>
+                            <td><button type="button" @click="editarProducto($index)">Editar</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="botones-container">
+                <button @click="mostrarConsulta = true; mostrarAlta = false; mostrarModificar = false;">Consultar
+                    Producto</button>
+                <button @click="mostrarConsulta = false; mostrarAlta = true; mostrarModificar = false;">Alta
+                    Producto</button>
+                <button @click="mostrarConsulta = false; mostrarAlta = false; mostrarModificar = true;">Modificar
+                    Producto</button>
+            </div>
+            <div v-if="mostrarConsulta">
+                <h2 class="rojo">Consultar Producto</h2>
+                <div class="contenedor-centrado">
+                    <form @submit.prevent="consultarProducto">
+                        <label for="consultaCodigo">Código del producto:</label>
+                        <input type="number" id="consultaCodigo" v-model="consultaCodigo" required>
+                        <button type="submit">Consultar</button>
+                        <div v-html="consultaResultado"></div>
+                    </form>
+                </div>
+            </div>
+            <div v-if="mostrarAlta">
+                <h2 class="verde">Alta de Producto</h2>
+                <form @submit.prevent="altaProducto">
+                    <label for="altaNombre">Nombre:</label>
+                    <input type="text" id="altaNombre" v-model="altaNombre" required>
+                    <label for="altaDescripcion">Descripción:</label>
+                    <input type="text" id="altaDescripcion" v-model="altaDescripcion" required>
+                    <label for="altaStock">Stock:</label>
+                    <input type="number" id="altaStock" v-model="altaStock" required>
+                    <label for="altaPrecio">Precio:</label>
+                    <input type="number" step="0.01" id="altaPrecio" v-model="altaPrecio" required>
+                    <button type="submit">Dar de Alta</button>
+                    <div v-if="altaResultado">{{ altaResultado }}</div>
+                </form>
+            </div>
+            <div v-if="mostrarModificar">
+                <h2 class="naranja">Modificar Producto</h2>
+                <form id="formularioModificar" @submit.prevent="modificarProducto">
+                    <label for="modificarCodigo">Código:</label>
+                    <input type="number" id="modificarCodigo" v-model="modificarCodigo" required>
+                    <label for="modificarNombre">Nombre del producto:</label>
+                    <input type="text" id="modificarNombre" v-model="modificarNombre" required>
+                    <label for="modificarNuevaDescripcion">Nueva Descripción:</label>
+                    <input type="text" id="modificarNuevaDescripcion" v-model="modificarNuevaDescripcion" required>
+                    <label for="modificarNuevoStock">Nuevo Stock:</label>
+                    <input type="number" id="modificarNuevoStock" v-model="modificarNuevoStock" required>
+                    <label for="modificarNuevoPrecio">Nuevo Precio:</label>
+                    <input type="number" step="0.01" id="modificarNuevoPrecio" v-model="modificarNuevoPrecio" required>
+                    <button type="submit">Modificar</button>
+                    <div v-if="modificarResultado">{{ modificarResultado }}</div>
+                </form>
+            </div>
         </div>
-        <h2 class="rojo">Consultar Producto</h2>
-        <div class="contenedor-centrado">
-            <form @submit.prevent="consultarProducto">
-                <label for="consultaCodigo">Código del producto:</label>
-                <input type="number" id="consultaCodigo" v-model="consultaCodigo" required>
-                <button type="submit">Consultar</button>
-                <div v-html="consultaResultado"></div>
-            </form>
-        </div>
-
-     
-
-
-        <h2 class="verde">Alta de Producto</h2>
-        <form @submit.prevent="altaProducto">
-            <label for="altaNombre">Nombre:</label>
-            <input type="text" id="altaNombre" v-model="altaNombre" required>
-            <label for="altaDescripcion">Descripción:</label>
-            <input type="text" id="altaDescripcion" v-model="altaDescripcion" required>
-            <label for="altaStock">Stock:</label>
-            <input type="number" id="altaStock" v-model="altaStock" required>
-            <label for="altaPrecio">Precio:</label>
-            <input type="number" step="0.01" id="altaPrecio" v-model="altaPrecio" required>
-            <button type="submit">Dar de Alta</button>
-            <div v-if="altaResultado">{{ altaResultado }}</div>
-        </form>
-        <h2 class="naranja">Modificar Producto</h2>
-        <form id="formularioModificar" @submit.prevent="modificarProducto">
-            <label for="modificarCodigo">Código:</label>
-            <input type="number" id="modificarCodigo" v-model="modificarCodigo" required>            
-            <label for="modificarNombre">Nombre del producto:</label>
-            <input type="text" id="modificarNombre" v-model="modificarNombre" required>
-            <label for="modificarNuevaDescripcion">Nueva Descripción:</label>
-            <input type="text" id="modificarNuevaDescripcion" v-model="modificarNuevaDescripcion" required>
-            <label for="modificarNuevoStock">Nuevo Stock:</label>
-            <input type="number" id="modificarNuevoStock" v-model="modificarNuevoStock" required>
-            <label for="modificarNuevoPrecio">Nuevo Precio:</label>
-            <input type="number" step="0.01" id="modificarNuevoPrecio" v-model="modificarNuevoPrecio" required>
-            <button type="submit">Modificar</button>
-            <div v-if="modificarResultado">{{ modificarResultado }}</div>
-        </form>
     </div>
     <script src="https://unpkg.com/vue@next"></script>
-    <script src="/js/gestion.js"></script>
+    <script src="interno.js"></script>
 </body>
 
 </html>

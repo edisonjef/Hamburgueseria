@@ -15,6 +15,9 @@ const app = Vue.createApp({
             modificarNuevaDescripcion: '',
             modificarNuevoStock: '',
             modificarNuevoPrecio: '',
+            mostrarConsulta: false,
+            mostrarAlta: false,
+            mostrarModificar: false,
         };
     },
     methods: {
@@ -22,7 +25,7 @@ const app = Vue.createApp({
             fetch(`https://apiedison.pythonanywhere.com/productos/${this.consultaCodigo}`)
                 .then(response => response.json())
                 .then(producto => {
-                    if (producto.codigo) {
+                    if (producto) {
                         this.consultaResultado = `
                             <table>
                                 <tr>
@@ -50,7 +53,6 @@ const app = Vue.createApp({
                     this.consultaResultado = 'Error al realizar la consulta';
                 });
         },
-        
         altaProducto() {
             fetch('https://apiedison.pythonanywhere.com/productos', {
                 method: 'POST',
@@ -73,7 +75,7 @@ const app = Vue.createApp({
                                 this.altaStock = '';
                                 this.altaPrecio = '';
                                 this.listarProductos();
-                                this.altaResultado = JSON.stringify(producto.mensaje);
+                                this.altaResultado = JSON.stringify(producto);
                             });
                     } else {
                         this.altaResultado = 'Alta no efectuada';
@@ -143,7 +145,10 @@ const app = Vue.createApp({
 
     mounted() {
         this.listarProductos();
-    }
+        this.mostrarConsulta = false;
+        this.mostrarAlta = false;
+        this.mostrarModificar = false;
+    },
 });
 
 app.mount('#app');
