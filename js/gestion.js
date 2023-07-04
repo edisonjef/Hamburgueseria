@@ -25,7 +25,7 @@ const app = Vue.createApp({
             fetch(`https://apiedison.pythonanywhere.com/productos/${this.consultaCodigo}`)
                 .then(response => response.json())
                 .then(producto => {
-                    if (producto) {
+                    if (producto && producto.codigo) {
                         this.consultaResultado = `
                             <table>
                                 <tr>
@@ -44,8 +44,6 @@ const app = Vue.createApp({
                                 </tr>
                             </table>
                     `;
-                    } else if (producto.codigo == undefined || producto.nombre == undefined || producto.descripcion == undefined || producto.stock == undefined || producto.precio == undefined) {
-                        this.consultaResultado = 'Producto no encontrado';
                     } else {
                         this.consultaResultado = 'Producto no encontrado';
                     }
