@@ -39,23 +39,30 @@
                             <td>{{ producto.descripcion }}</td>
                             <td>{{ producto.stock }}</td>
                             <td>{{ producto.precio }}</td>
-                            <td><button type="button" @click="editarProducto($index);mostrarConsulta = false; mostrarAlta = false; mostrarModificar = true;">Editar</button></td>
+                            <td>
+                                <button type="button" @click="esperModif($event)">
+                                    Editar
+                                </button>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
             </div>
             <div class="botones-container">
-                <button @click="mostrarConsulta = true; mostrarAlta = false; mostrarModificar = false;">Consultar
-                    Producto</button>
-                <button @click="mostrarConsulta = false; mostrarAlta = true; mostrarModificar = false;">Alta
-                    Producto</button>
-                <button @click="mostrarConsulta = false; mostrarAlta = false; mostrarModificar = true;">Modificar
-                    Producto</button>
+                <button type="button" @click="esperConsul($event)">
+                    Consultar Producto
+                </button>
+                <button type="button" @click="esperAlta($event)">
+                    Dar de Alta
+                </button>
+                <button type="button" @click="esperModif($event)">
+                    Modificar Producto
+                </button>
             </div>
             <div v-if="mostrarConsulta">
                 <h2 class="rojo">Consultar Producto</h2>
                 <div class="contenedor-centrado">
-                    <form @submit.prevent="consultarProducto">
+                    <form id="formularioConsul" @submit.prevent="consultarProducto">
                         <label for="consultaCodigo">Código del producto:</label>
                         <input type="number" id="consultaCodigo" v-model="consultaCodigo" required>
                         <button type="submit">Consultar</button>
@@ -65,7 +72,7 @@
             </div>
             <div v-if="mostrarAlta">
                 <h2 class="verde">Alta de Producto</h2>
-                <form @submit.prevent="altaProducto">
+                <form id="formularioAlta" @submit.prevent="altaProducto">
                     <label for="altaNombre">Nombre:</label>
                     <input type="text" id="altaNombre" v-model="altaNombre" required>
                     <label for="altaDescripcion">Descripción:</label>

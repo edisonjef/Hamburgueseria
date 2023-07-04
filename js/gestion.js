@@ -10,7 +10,7 @@ const app = Vue.createApp({
             altaDescripcion: '',
             altaStock: '',
             altaPrecio: '',
-            modificarCodigo:'',
+            modificarCodigo: '',
             modificarNombre: '',
             modificarNuevaDescripcion: '',
             modificarNuevoStock: '',
@@ -44,6 +44,8 @@ const app = Vue.createApp({
                                 </tr>
                             </table>
                     `;
+                    } else if (producto.codigo == undefined || producto.nombre == undefined || producto.descripcion == undefined || producto.stock == undefined || producto.precio == undefined) {
+                        this.consultaResultado = 'Producto no encontrado';
                     } else {
                         this.consultaResultado = 'Producto no encontrado';
                     }
@@ -129,16 +131,44 @@ const app = Vue.createApp({
                     console.error(error);
                 });
         },
-        editarProducto(index) {
-            const formulario = document.getElementById('formularioModificar');
-            formulario.scrollIntoView({ behavior: 'smooth' });
+        viewModificar(index) {
+            const formulario = document.getElementById("formularioModificar");
+            formulario.scrollIntoView({ behavior: "smooth" });
+        },
+        esperModif(index) {
+            this.mostrarConsulta = false;
+            this.mostrarAlta = false;
+            this.mostrarModificar = true;
 
-            /*
-            const producto = this.productos[index];
-            this.mNombre = producto.nombre;
-            this.mDescripcion = producto.descripcion;
-            this.mStock = producto.stock;
-            this.mPrecio = producto.precio;*/
+            setTimeout(() => {
+                this.viewModificar(index);
+            }, 0);
+        },
+        viewConsul(index) {
+            const formulario = document.getElementById('formularioConsul');
+            formulario.scrollIntoView({ behavior: 'smooth' });
+        },
+        esperConsul(index) {
+            this.mostrarConsulta = true;
+            this.mostrarAlta = false;
+            this.mostrarModificar = false;
+
+            setTimeout(() => {
+                this.viewConsul(index);
+            }, 0);
+        },
+        viewAlta(index) {
+            const formulario = document.getElementById('formularioAlta');
+            formulario.scrollIntoView({ behavior: 'smooth' });
+        },
+        esperAlta(index) {
+            this.mostrarConsulta = false;
+            this.mostrarAlta = true;
+            this.mostrarModificar = false;
+
+            setTimeout(() => {
+                this.viewAlta(index);
+            }, 0);
         },
     },
 
