@@ -147,183 +147,256 @@ fetch(URL + 'productos')
 
     }
 
-    // Obtenemos la referencia del botón
-    var boton1 = document.getElementById('1');
-    var mensajeSinStock_1 = document.getElementById('sin-stock-1');
+    // Creo un array vacio de 16 elementos
+    var pedido = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
-    if (data[0].stock == 0) {
-      // Oculta el botón
-      boton1.style.display = 'none';
-      mensajeSinStock_1.style.display = 'block';
-    }
+    botones(pedido);
 
-    if (data[1] !== undefined) {
-      // Obtenemos la referencia del botón
-      var boton2 = document.getElementById('2');
-      var mensajeSinStock_2 = document.getElementById('sin-stock-2');
+    function botones(pedido) {
+      var pedido = pedido;
 
-      if (data[1].stock == 0) {
-        // Oculta el botón
-        boton2.style.display = 'none';
-        mensajeSinStock_2.style.display = 'block';
+      if (data[0] !== undefined) {
+        // Obtenemos la referencia del botón
+        var boton1 = document.getElementById('1');
+        var mensajeSinStock_1 = document.getElementById('sin-stock-1');
+
+        if ((data[0].stock <= 0) || (data[0].stock == pedido[0])) {
+          // Oculta el botón
+          boton1.style.display = 'none';
+          mensajeSinStock_1.style.display = 'block';
+        }else{
+          boton1.style.display = 'block';
+          mensajeSinStock_1.style.display = 'none';
+
+        }
+      }
+      if (data[1] !== undefined) {
+        // Obtenemos la referencia del botón
+        var boton2 = document.getElementById('2');
+        var mensajeSinStock_2 = document.getElementById('sin-stock-2');
+
+        if ((data[1].stock == 0) || (data[1].stock == pedido[1])) {
+          // Oculta el botón
+          boton2.style.display = 'none';
+          mensajeSinStock_2.style.display = 'block';
+        }else{
+          boton2.style.display = 'block';
+          mensajeSinStock_2.style.display = 'none';
+
+        }
+      }
+      if (data[2] !== undefined) {
+        // Obtenemos la referencia del botón
+        var boton3 = document.getElementById('3');
+        var mensajeSinStock_3 = document.getElementById('sin-stock-3');
+
+        if ((data[2].stock == 0) || (data[2].stock == pedido[2])) {
+          // Oculta el botón
+          boton3.style.display = 'none';
+          mensajeSinStock_3.style.display = 'block';
+        }else{
+          boton3.style.display = 'block';
+          mensajeSinStock_3.style.display = 'none';
+
+        }
+      }
+      if (data[3] !== undefined) {
+        // Obtenemos la referencia del botón
+        var boton4 = document.getElementById('4');
+        var mensajeSinStock_4 = document.getElementById('sin-stock-4');
+
+        if ((data[3].stock == 0) || (data[3].stock == pedido[3])) {
+          // Oculta el botón
+          boton4.style.display = 'none';
+          mensajeSinStock_4.style.display = 'block';
+        }else{
+          boton4.style.display = 'block';
+          mensajeSinStock_4.style.display = 'none';
+
+        }
+      }
+      if (data[4] !== undefined) {
+        // Obtenemos la referencia del botón
+        var boton5 = document.getElementById('5');
+        var mensajeSinStock_5 = document.getElementById('sin-stock-5');
+
+        if ((data[4].stock == 0) || (data[4].stock == pedido[4])) {
+          // Oculta el botón
+          boton5.style.display = 'none';
+          mensajeSinStock_5.style.display = 'block';
+        }else{
+          boton5.style.display = 'block';
+          mensajeSinStock_5.style.display = 'none';
+
+        }
+      }
+      if (data[5] !== undefined) {
+        // Obtenemos la referencia del botón
+        var boton6 = document.getElementById('6');
+        var mensajeSinStock_6 = document.getElementById('sin-stock-6');
+
+        if ((data[5].stock == 0) || (data[5].stock == pedido[5])) {
+          // Oculta el botón
+          boton6.style.display = 'none';
+          mensajeSinStock_6.style.display = 'block';
+        }else{
+          boton6.style.display = 'block';
+          mensajeSinStock_6.style.display = 'none';
+
+        }
+      }
+      if (data[6] !== undefined) {
+        // Obtenemos la referencia del botón
+        var boton7 = document.getElementById('7');
+        var mensajeSinStock_7 = document.getElementById('sin-stock-7');
+
+        if ((data[6].stock == 0) || (data[6].stock == pedido[6])) {
+          // Oculta el botón
+          boton7.style.display = 'none';
+          mensajeSinStock_7.style.display = 'block';
+        }else{
+          boton7.style.display = 'block';
+          mensajeSinStock_7.style.display = 'none';
+
+        }
+      }
+      if (data[7] !== undefined) {
+        // Obtenemos la referencia del botón
+        var boton8 = document.getElementById('8');
+        var mensajeSinStock_8 = document.getElementById('sin-stock-8');
+
+        if ((data[7].stock == 0) || (data[7].stock == pedido[7])) {
+          // Oculta el botón
+          boton8.style.display = 'none';
+          mensajeSinStock_8.style.display = 'block';
+        }else{
+          boton8.style.display = 'block';
+          mensajeSinStock_8.style.display = 'none';
+
+        }
+      }
+      if (data[8] !== undefined) {
+        // Obtenemos la referencia del botón
+        var boton9 = document.getElementById('9');
+        var mensajeSinStock_9 = document.getElementById('sin-stock-9');
+
+        if ((data[8].stock == 0) || (data[8].stock == pedido[8])) {
+          // Oculta el botón
+          boton9.style.display = 'none';
+          mensajeSinStock_9.style.display = 'block';
+        }else{
+          boton9.style.display = 'block';
+          mensajeSinStock_9.style.display = 'none';
+
+        }
+      }
+      if (data[9] !== undefined) {
+        // Obtenemos la referencia del botón
+        var boton10 = document.getElementById('10');
+        var mensajeSinStock_10 = document.getElementById('sin-stock-10');
+
+        if ((data[9].stock == 0) || (data[9].stock == pedido[9])) {
+          // Oculta el botón
+          boton10.style.display = 'none';
+          mensajeSinStock_10.style.display = 'block';
+        }else{
+          boton10.style.display = 'block';
+          mensajeSinStock_10.style.display = 'none';
+
+        }
+      }
+      if (data[10] !== undefined) {
+        // Obtenemos la referencia del botón
+        var boton11 = document.getElementById('11');
+        var mensajeSinStock_11 = document.getElementById('sin-stock-11');
+
+        if ((data[10].stock == 0) || (data[10].stock == pedido[10])) {
+          // Oculta el botón
+          boton11.style.display = 'none';
+          mensajeSinStock_11.style.display = 'block';
+        }else{
+          boton11.style.display = 'block';
+          mensajeSinStock_11.style.display = 'none';
+
+        }
+      }
+      if (data[11] !== undefined) {
+        // Obtenemos la referencia del botón
+        var boton12 = document.getElementById('12');
+        var mensajeSinStock_12 = document.getElementById('sin-stock-12');
+
+        if ((data[11].stock == 0) || (data[11].stock == pedido[11])) {
+          // Oculta el botón
+          boton12.style.display = 'none';
+          mensajeSinStock_12.style.display = 'block';
+        }else{
+          boton12.style.display = 'block';
+          mensajeSinStock_12.style.display = 'none';
+
+        }
+      }
+      if (data[12] !== undefined) {
+        // Obtenemos la referencia del botón
+        var boton13 = document.getElementById('13');
+        var mensajeSinStock_13 = document.getElementById('sin-stock-13');
+
+        if ((data[12].stock == 0) || (data[12].stock == pedido[12])) {
+          // Oculta el botón
+          boton13.style.display = 'none';
+          mensajeSinStock_13.style.display = 'block';
+        }else{
+          boton13.style.display = 'block';
+          mensajeSinStock_13.style.display = 'none';
+
+        }
+      }
+      if (data[13] !== undefined) {
+        // Obtenemos la referencia del botón
+        var boton14 = document.getElementById('14');
+        var mensajeSinStock_14 = document.getElementById('sin-stock-14');
+
+        if ((data[13].stock == 0) || (data[13].stock == pedido[13])) {
+          // Oculta el botón
+          boton14.style.display = 'none';
+          mensajeSinStock_14.style.display = 'block';
+        }else{
+          boton14.style.display = 'block';
+          mensajeSinStock_14.style.display = 'none';
+
+        }
+      }
+      if (data[14] !== undefined) {
+        // Obtenemos la referencia del botón
+        var boton15 = document.getElementById('15');
+        var mensajeSinStock_15 = document.getElementById('sin-stock-15');
+
+        if ((data[14].stock == 0) || (data[14].stock == pedido[14])) {
+          // Oculta el botón
+          boton15.style.display = 'none';
+          mensajeSinStock_15.style.display = 'block';
+        }else{
+          boton15.style.display = 'block';
+          mensajeSinStock_15.style.display = 'none';
+
+        }
+      }
+
+      if (data[15] !== undefined) {
+        // Obtenemos la referencia del botón
+        var boton16 = document.getElementById('16');
+        var mensajeSinStock_16 = document.getElementById('sin-stock-16');
+
+        if ((data[15].stock == 0) || (data[15].stock == pedido[15])) {
+          // Oculta el botón
+          boton16.style.display = 'none';
+          mensajeSinStock_16.style.display = 'block';
+        }else{
+          boton16.style.display = 'block';
+          mensajeSinStock_16.style.display = 'none';
+
+        }
       }
     }
-    if (data[2] !== undefined) {
-      // Obtenemos la referencia del botón
-      var boton3 = document.getElementById('3');
-      var mensajeSinStock_3 = document.getElementById('sin-stock-3');
-
-      if (data[2].stock == 0) {
-        // Oculta el botón
-        boton3.style.display = 'none';
-        mensajeSinStock_3.style.display = 'block';
-      }
-    }
-    if (data[3] !== undefined) {
-      // Obtenemos la referencia del botón
-      var boton4 = document.getElementById('4');
-      var mensajeSinStock_4 = document.getElementById('sin-stock-4');
-
-      if (data[3].stock == 0) {
-        // Oculta el botón
-        boton4.style.display = 'none';
-        mensajeSinStock_4.style.display = 'block';
-      }
-    }
-    if (data[4] !== undefined) {
-      // Obtenemos la referencia del botón
-      var boton5 = document.getElementById('5');
-      var mensajeSinStock_5 = document.getElementById('sin-stock-5');
-
-      if (data[4].stock == 0) {
-        // Oculta el botón
-        boton5.style.display = 'none';
-        mensajeSinStock_5.style.display = 'block';
-      }
-    }
-    if (data[5] !== undefined) {
-      // Obtenemos la referencia del botón
-      var boton6 = document.getElementById('6');
-      var mensajeSinStock_6 = document.getElementById('sin-stock-6');
-
-      if (data[5].stock == 0) {
-        // Oculta el botón
-        boton6.style.display = 'none';
-        mensajeSinStock_6.style.display = 'block';
-      }
-    }
-    if (data[6] !== undefined) {
-      // Obtenemos la referencia del botón
-      var boton7 = document.getElementById('7');
-      var mensajeSinStock_7 = document.getElementById('sin-stock-7');
-
-      if (data[6].stock == 0) {
-        // Oculta el botón
-        boton7.style.display = 'none';
-        mensajeSinStock_7.style.display = 'block';
-      }
-    }
-    if (data[7] !== undefined) {
-      // Obtenemos la referencia del botón
-      var boton8 = document.getElementById('8');
-      var mensajeSinStock_8 = document.getElementById('sin-stock-8');
-
-      if (data[7].stock == 0) {
-        // Oculta el botón
-        boton8.style.display = 'none';
-        mensajeSinStock_8.style.display = 'block';
-      }
-    }
-    if (data[8] !== undefined) {
-      // Obtenemos la referencia del botón
-      var boton9 = document.getElementById('9');
-      var mensajeSinStock_9 = document.getElementById('sin-stock-9');
-
-      if (data[8].stock == 0) {
-        // Oculta el botón
-        boton9.style.display = 'none';
-        mensajeSinStock_9.style.display = 'block';
-      }
-    }
-    if (data[9] !== undefined) {
-      // Obtenemos la referencia del botón
-      var boton10 = document.getElementById('10');
-      var mensajeSinStock_10 = document.getElementById('sin-stock-10');
-
-      if (data[9].stock == 0) {
-        // Oculta el botón
-        boton10.style.display = 'none';
-        mensajeSinStock_10.style.display = 'block';
-      }
-    }
-    if (data[10] !== undefined) {
-      // Obtenemos la referencia del botón
-      var boton11 = document.getElementById('11');
-      var mensajeSinStock_11 = document.getElementById('sin-stock-11');
-
-      if (data[10].stock == 0) {
-        // Oculta el botón
-        boton11.style.display = 'none';
-        mensajeSinStock_11.style.display = 'block';
-      }
-    }
-    if (data[11] !== undefined) {
-      // Obtenemos la referencia del botón
-      var boton12 = document.getElementById('12');
-      var mensajeSinStock_12 = document.getElementById('sin-stock-12');
-
-      if (data[11].stock == 0) {
-        // Oculta el botón
-        boton12.style.display = 'none';
-        mensajeSinStock_12.style.display = 'block';
-      }
-    }
-    if (data[12] !== undefined) {
-      // Obtenemos la referencia del botón
-      var boton13 = document.getElementById('13');
-      var mensajeSinStock_13 = document.getElementById('sin-stock-13');
-
-      if (data[12].stock == 0) {
-        // Oculta el botón
-        boton13.style.display = 'none';
-        mensajeSinStock_13.style.display = 'block';
-      }
-    }
-    if (data[13] !== undefined) {
-      // Obtenemos la referencia del botón
-      var boton14 = document.getElementById('14');
-      var mensajeSinStock_14 = document.getElementById('sin-stock-14');
-
-      if (data[13].stock == 0) {
-        // Oculta el botón
-        boton14.style.display = 'none';
-        mensajeSinStock_14.style.display = 'block';
-      }
-    }
-    if (data[14] !== undefined) {
-      // Obtenemos la referencia del botón
-      var boton15 = document.getElementById('15');
-      var mensajeSinStock_15 = document.getElementById('sin-stock-15');
-
-      if (data[14].stock == 0) {
-        // Oculta el botón
-        boton15.style.display = 'none';
-        mensajeSinStock_15.style.display = 'block';
-      }
-    }
-
-    if (data[15] !== undefined) {
-      // Obtenemos la referencia del botón
-      var boton16 = document.getElementById('16');
-      var mensajeSinStock_16 = document.getElementById('sin-stock-16');
-
-      if (data[15].stock == 0) {
-        // Oculta el botón
-        boton16.style.display = 'none';
-        mensajeSinStock_16.style.display = 'block';
-      }
-    }
-
 
 
 
@@ -380,8 +453,7 @@ fetch(URL + 'productos')
     var total15 = 0;
     var total16 = 0;
 
-    // Creo un array vacio de 16 elementos
-    var pedido = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+
 
     // Agregar un evento de escucha al botón
     button1.addEventListener('click', function () {
@@ -518,19 +590,24 @@ fetch(URL + 'productos')
       console.log('boton pedido 16');
       muestraMenu();
     });
+
+
     // Agregar un evento de escucha al botón
     vaciar.addEventListener('click', function () {
+
+      console.log('se presiono el boton "vaciar carrito"')
       // Vaciar array pedido
       for (let i = 0; i < pedido.length; i++) {
         pedido[i] = 0;
       }
-      //oculta el div de pedido
+      console.log("Se borro el carrito de compras.")
+      console.log(pedido);
+      botones(pedido);
 
+      //oculta el div de pedido
       var div = document.getElementById('pedido_activo');
       div.style.display = "none";
 
-      console.log(pedido);
-      console.log('boton vaciar carrito')
     });
 
     pedir.addEventListener('click', function () {
@@ -542,10 +619,14 @@ fetch(URL + 'productos')
       //cargaDePedido();
 
       //window.location.href = "/formEnvioPedido.html";
+      
     });
 
 
     function muestraMenu() {
+
+      // Llama a la funcion para mostrar el boton de pedir o el mensaje de NO DISPONIBLE
+      botones(pedido);
       // Muestra la ventana de pedido_activo
       var div = document.getElementById('pedido_activo');
       // Al activarse el evento muestra el div
@@ -895,14 +976,14 @@ fetch(URL + 'productos')
 
           // Creamos un objeto con los datos del stock actualizados. mantengo los otros atributos igual.
           if (data[i] !== undefined) {
-          var producto = {
-            codigo: data[i].codigo,
-            descripcion: data[i].descripcion,
-            nombre: data[i].nombre,
-            precio: data[i].precio,
-            stock: (data[i].stock - pedido[i]), // resta al stock la cantidad pedida
-          };
-        }
+            var producto = {
+              codigo: data[i].codigo,
+              descripcion: data[i].descripcion,
+              nombre: data[i].nombre,
+              precio: data[i].precio,
+              stock: (data[i].stock - pedido[i]), // resta al stock la cantidad pedida
+            };
+          }
           // Realizamos la solicitud PUT al servidor para guardar los cambios
           fetch(URL + 'productos/' + producto.codigo, {
             method: 'PUT',
