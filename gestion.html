@@ -39,7 +39,7 @@
                             <td>{{ producto.descripcion }}</td>
                             <td>{{ producto.stock }}</td>
                             <td>{{ producto.precio }}</td>
-                            <td><button type="button" @click="editarProducto($index)">Editar</button></td>
+                            <td><button type="button" @click="editarProducto($index);mostrarConsulta = false; mostrarAlta = false; mostrarModificar = true;">Editar</button></td>
                         </tr>
                     </tbody>
                 </table>
