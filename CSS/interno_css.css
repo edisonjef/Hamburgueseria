@@ -1,0 +1,111 @@
+body {
+    background-color: floralwhite;
+}
+
+.contenedor-centrado {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.divh1 {
+    margin-top: 20px;
+    border-top: 3px solid #94C12D;
+    border-bottom: 3px solid #D9213F;
+}
+
+h1 {
+    font-family: AristaPro;
+    text-align: center;
+}
+
+h1,
+h2 {
+    text-align: center;
+}
+
+table {
+    max-width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border: 3px solid #cd7b00;
+    border-radius: 5px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 450px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border: 3px solid #94C12D;
+    border-radius: 5px;
+    text-align: center;
+}
+
+form label {
+    align-self: flex-start;
+}
+
+form input[type="text"],
+form input[type="number"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #cd7b00;
+    border-radius: 5px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="submit"],
+button {
+    padding: 8px;
+    margin: 4px;
+    background-color: #94C12D;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    cursor: help;
+}
+
+input[type="submit"]:hover,
+button:hover {
+    background-color: #D9213F;
+}
+
+a {
+    padding: 8px;
+    margin: 4px;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 85%;
+}
+
+a:hover {
+    background-color: #cd7b00;
+}
+
+.place {
+    background-color: transparent;
+}
+
+#lista-productos {
+    margin-top: 20px;
+}
+
+.botones-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}

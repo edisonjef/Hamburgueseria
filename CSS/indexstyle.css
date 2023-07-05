@@ -254,3 +254,20 @@
 .id{
 
 }
+
+
+
+.botonete{
+    background-color: #F28D28;
+    color: aliceblue;
+    border:0px;
+    border-radius:6px;
+    padding: 6px;
+}
+.botonete:hover{
+    border-radius:18px;
+    font-size: larger;
+    background-color: #ff8000;
+    transition-property: all;
+    transition-duration: 0.4s;
+}
