@@ -164,7 +164,7 @@ fetch(URL + 'productos')
           // Oculta el botón
           boton1.style.display = 'none';
           mensajeSinStock_1.style.display = 'block';
-        }else{
+        } else {
           boton1.style.display = 'block';
           mensajeSinStock_1.style.display = 'none';
 
@@ -179,7 +179,7 @@ fetch(URL + 'productos')
           // Oculta el botón
           boton2.style.display = 'none';
           mensajeSinStock_2.style.display = 'block';
-        }else{
+        } else {
           boton2.style.display = 'block';
           mensajeSinStock_2.style.display = 'none';
 
@@ -194,7 +194,7 @@ fetch(URL + 'productos')
           // Oculta el botón
           boton3.style.display = 'none';
           mensajeSinStock_3.style.display = 'block';
-        }else{
+        } else {
           boton3.style.display = 'block';
           mensajeSinStock_3.style.display = 'none';
 
@@ -209,7 +209,7 @@ fetch(URL + 'productos')
           // Oculta el botón
           boton4.style.display = 'none';
           mensajeSinStock_4.style.display = 'block';
-        }else{
+        } else {
           boton4.style.display = 'block';
           mensajeSinStock_4.style.display = 'none';
 
@@ -224,7 +224,7 @@ fetch(URL + 'productos')
           // Oculta el botón
           boton5.style.display = 'none';
           mensajeSinStock_5.style.display = 'block';
-        }else{
+        } else {
           boton5.style.display = 'block';
           mensajeSinStock_5.style.display = 'none';
 
@@ -239,7 +239,7 @@ fetch(URL + 'productos')
           // Oculta el botón
           boton6.style.display = 'none';
           mensajeSinStock_6.style.display = 'block';
-        }else{
+        } else {
           boton6.style.display = 'block';
           mensajeSinStock_6.style.display = 'none';
 
@@ -254,7 +254,7 @@ fetch(URL + 'productos')
           // Oculta el botón
           boton7.style.display = 'none';
           mensajeSinStock_7.style.display = 'block';
-        }else{
+        } else {
           boton7.style.display = 'block';
           mensajeSinStock_7.style.display = 'none';
 
@@ -269,7 +269,7 @@ fetch(URL + 'productos')
           // Oculta el botón
           boton8.style.display = 'none';
           mensajeSinStock_8.style.display = 'block';
-        }else{
+        } else {
           boton8.style.display = 'block';
           mensajeSinStock_8.style.display = 'none';
 
@@ -284,7 +284,7 @@ fetch(URL + 'productos')
           // Oculta el botón
           boton9.style.display = 'none';
           mensajeSinStock_9.style.display = 'block';
-        }else{
+        } else {
           boton9.style.display = 'block';
           mensajeSinStock_9.style.display = 'none';
 
@@ -299,7 +299,7 @@ fetch(URL + 'productos')
           // Oculta el botón
           boton10.style.display = 'none';
           mensajeSinStock_10.style.display = 'block';
-        }else{
+        } else {
           boton10.style.display = 'block';
           mensajeSinStock_10.style.display = 'none';
 
@@ -314,7 +314,7 @@ fetch(URL + 'productos')
           // Oculta el botón
           boton11.style.display = 'none';
           mensajeSinStock_11.style.display = 'block';
-        }else{
+        } else {
           boton11.style.display = 'block';
           mensajeSinStock_11.style.display = 'none';
 
@@ -329,7 +329,7 @@ fetch(URL + 'productos')
           // Oculta el botón
           boton12.style.display = 'none';
           mensajeSinStock_12.style.display = 'block';
-        }else{
+        } else {
           boton12.style.display = 'block';
           mensajeSinStock_12.style.display = 'none';
 
@@ -344,7 +344,7 @@ fetch(URL + 'productos')
           // Oculta el botón
           boton13.style.display = 'none';
           mensajeSinStock_13.style.display = 'block';
-        }else{
+        } else {
           boton13.style.display = 'block';
           mensajeSinStock_13.style.display = 'none';
 
@@ -359,7 +359,7 @@ fetch(URL + 'productos')
           // Oculta el botón
           boton14.style.display = 'none';
           mensajeSinStock_14.style.display = 'block';
-        }else{
+        } else {
           boton14.style.display = 'block';
           mensajeSinStock_14.style.display = 'none';
 
@@ -374,7 +374,7 @@ fetch(URL + 'productos')
           // Oculta el botón
           boton15.style.display = 'none';
           mensajeSinStock_15.style.display = 'block';
-        }else{
+        } else {
           boton15.style.display = 'block';
           mensajeSinStock_15.style.display = 'none';
 
@@ -390,7 +390,7 @@ fetch(URL + 'productos')
           // Oculta el botón
           boton16.style.display = 'none';
           mensajeSinStock_16.style.display = 'block';
-        }else{
+        } else {
           boton16.style.display = 'block';
           mensajeSinStock_16.style.display = 'none';
 
@@ -614,11 +614,17 @@ fetch(URL + 'productos')
 
 
       modifica_stock(pedido);
+
       console.log('stock modificado');
 
       cargaDePedido();
 
-      window.location.href = "/formEnvioPedido.html";
+      // Espera 1 segundo (1000 milisegundos) antes de abrir la página
+      setTimeout(function () {
+        window.location.href = "/formEnvioPedido.html";
+      }, 1000);
+
+      //window.location.href = "/formEnvioPedido.html";
 
     });
 
