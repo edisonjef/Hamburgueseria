@@ -6,6 +6,8 @@ const app = Vue.createApp({
             consultaResultado: '',
             altaResultado: '',
             modificarResultado: '',
+            eliminaResultado: '',
+            eliminaCodigo: '',
             altaNombre: '',
             altaDescripcion: '',
             altaStock: '',
@@ -18,6 +20,7 @@ const app = Vue.createApp({
             mostrarConsulta: false,
             mostrarAlta: false,
             mostrarModificar: false,
+            mostrarEliminar: false,
         };
     },
     methods: {
@@ -75,7 +78,7 @@ const app = Vue.createApp({
                                 this.altaStock = '';
                                 this.altaPrecio = '';
                                 this.listarProductos();
-                                this.altaResultado = JSON.stringify(producto);
+                                this.altaResultado = producto.mensaje;
                             });
                     } else {
                         this.altaResultado = 'Alta no efectuada';
@@ -119,6 +122,26 @@ const app = Vue.createApp({
                     console.error(error);
                 });
         },
+        eliminarProducto() {
+            fetch(`https://apiedison.pythonanywhere.com/eliminar/${this.eliminaCodigo}`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+
+            })
+                .then(response => {
+                    response.json()
+                        .then(producto => {
+                            this.listarProductos();
+                            this.eliminaResultado = producto.mensaje;
+                        });
+
+                })
+                .catch(error => {
+                    console.error(error);
+                });
+        },
         listarProductos() {
             fetch('https://apiedison.pythonanywhere.com/productos')
                 .then(response => response.json())
@@ -134,6 +157,7 @@ const app = Vue.createApp({
             formulario.scrollIntoView({ behavior: "smooth" });
         },
         esperModif(index) {
+            this.mostrarEliminar = false;
             this.mostrarConsulta = false;
             this.mostrarAlta = false;
             this.mostrarModificar = true;
@@ -147,7 +171,22 @@ const app = Vue.createApp({
             formulario.scrollIntoView({ behavior: 'smooth' });
         },
         esperConsul(index) {
+            this.mostrarEliminar = false;
             this.mostrarConsulta = true;
+            this.mostrarAlta = false;
+            this.mostrarModificar = false;
+
+            setTimeout(() => {
+                this.viewConsul(index);
+            }, 0);
+        },
+        viewElimi(index) {
+            const formulario = document.getElementById('formularioElimi');
+            formulario.scrollIntoView({ behavior: 'smooth' });
+        },
+        esperElimi(index) {
+            this.mostrarEliminar = true;
+            this.mostrarConsulta = false;
             this.mostrarAlta = false;
             this.mostrarModificar = false;
 
@@ -160,6 +199,7 @@ const app = Vue.createApp({
             formulario.scrollIntoView({ behavior: 'smooth' });
         },
         esperAlta(index) {
+            this.mostrarEliminar = false;
             this.mostrarConsulta = false;
             this.mostrarAlta = true;
             this.mostrarModificar = false;
@@ -173,6 +213,7 @@ const app = Vue.createApp({
 
     mounted() {
         this.listarProductos();
+        this.mostrarEliminar = false;
         this.mostrarConsulta = false;
         this.mostrarAlta = false;
         this.mostrarModificar = false;
