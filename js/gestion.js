@@ -184,14 +184,14 @@ const app = Vue.createApp({
             const formulario = document.getElementById('formularioElimi');
             formulario.scrollIntoView({ behavior: 'smooth' });
         },
-        esperElimi(index) {
+        esperElimin(index) {
             this.mostrarEliminar = true;
             this.mostrarConsulta = false;
             this.mostrarAlta = false;
             this.mostrarModificar = false;
 
             setTimeout(() => {
-                this.viewConsul(index);
+                this.viewElimi(index);
             }, 0);
         },
         viewAlta(index) {
