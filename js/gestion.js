@@ -115,6 +115,12 @@ const app = Vue.createApp({
                                 this.modificarResultado = 'Modificación realizada';
                                 setTimeout(() => {
                                     this.modificarResultado = '';
+                                    this.mostrarEliminar = false;
+                                    this.mostrarConsulta = false;
+                                    this.mostrarAlta = false;
+                                    this.mostrarModificar = false;
+                                    
+
                                     
                                 }, 1200);
                             });
