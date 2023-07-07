@@ -113,6 +113,10 @@ const app = Vue.createApp({
                                 this.modificarNuevoPrecio = '';
                                 this.listarProductos();
                                 this.modificarResultado = 'Modificación realizada';
+                                setTimeout(() => {
+                                    this.modificarResultado = '';
+                                    
+                                }, 1200);
                             });
                     } else {
                         this.modificarResultado = 'Modificación no efectuada';
@@ -167,7 +171,11 @@ const app = Vue.createApp({
 
             setTimeout(() => {
                 this.viewModificar(index);
-                completaFormulario(index.target.id);
+                this.modificarCodigo = (document.getElementById('codigo' + index.target.id).textContent)
+                this.modificarNombre = (document.getElementById('nombre' + index.target.id).textContent)
+                this.modificarNuevaDescripcion = (document.getElementById('descripcion' + index.target.id).textContent)
+                this.modificarNuevoStock =(document.getElementById('stock' + index.target.id).textContent)
+                this.modificarNuevoPrecio = (document.getElementById('precio' + index.target.id).textContent)
 
                 
             }, 0);
@@ -226,55 +234,5 @@ const app = Vue.createApp({
     },
 });
 
-
-
-
-   
-
-
-
-
-// Funcion para tomar los valores del id para autocompletar el formulario de modificacion
-
-function completaFormulario(id) {
-    const producto = document.getElementById('producto' + id)
-    const formulario = document.getElementById('formularioConsul');
-
-    var codigo = (document.getElementById('codigo' + id).textContent)
-    var nombre =(document.getElementById('nombre' + id).textContent)
-    var descripcion = (document.getElementById('descripcion' + id).textContent)
-    var stock = (document.getElementById('stock' + id).textContent)
-    var precio = (document.getElementById('precio' + id).textContent)
-
-    var formCodigo = document.getElementById('modificarCodigo')
-    var formNombre = document.getElementById('modificarNombre')
-    var formDescripcion = document.getElementById('modificarNuevaDescripcion')
-    var formStock = document.getElementById('modificarNuevoStock')
-    var formPrecio = document.getElementById('modificarNuevoPrecio')
-    
-    // this.modificarCodigo = codigo
-    // this.modificarNombre = nombre
-    // this.modificarNuevaDescripcion= descripcion
-    // this.modificarNuevoStock=stock
-    // this.modificarNuevoPrecio=precio
-
-     formCodigo.value =   codigo
-     formNombre.value =   nombre
-     formDescripcion.value =   descripcion
-     formStock.value =   stock
-     formPrecio.value = precio
-
-    // formCodigo.textContent =   codigo
-    // formNombre.textContent =   nombre
-    // formDescripcion.textContent=   descripcion
-    // formStock.textContent =   stock
-    // formPrecio.textContent =   precio
-
-
-
-
-  
-
-}
 
 app.mount('#app');
