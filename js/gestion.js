@@ -155,15 +155,21 @@ const app = Vue.createApp({
         viewModificar(index) {
             const formulario = document.getElementById("formularioModificar");
             formulario.scrollIntoView({ behavior: "smooth" });
+
         },
         esperModif(index) {
             this.mostrarEliminar = false;
             this.mostrarConsulta = false;
             this.mostrarAlta = false;
             this.mostrarModificar = true;
+            
+
 
             setTimeout(() => {
                 this.viewModificar(index);
+                completaFormulario(index.target.id);
+
+                
             }, 0);
         },
         viewConsul(index) {
@@ -219,5 +225,56 @@ const app = Vue.createApp({
         this.mostrarModificar = false;
     },
 });
+
+
+
+
+   
+
+
+
+
+// Funcion para tomar los valores del id para autocompletar el formulario de modificacion
+
+function completaFormulario(id) {
+    const producto = document.getElementById('producto' + id)
+    const formulario = document.getElementById('formularioConsul');
+
+    var codigo = (document.getElementById('codigo' + id).textContent)
+    var nombre =(document.getElementById('nombre' + id).textContent)
+    var descripcion = (document.getElementById('descripcion' + id).textContent)
+    var stock = (document.getElementById('stock' + id).textContent)
+    var precio = (document.getElementById('precio' + id).textContent)
+
+    var formCodigo = document.getElementById('modificarCodigo')
+    var formNombre = document.getElementById('modificarNombre')
+    var formDescripcion = document.getElementById('modificarNuevaDescripcion')
+    var formStock = document.getElementById('modificarNuevoStock')
+    var formPrecio = document.getElementById('modificarNuevoPrecio')
+    
+    // this.modificarCodigo = codigo
+    // this.modificarNombre = nombre
+    // this.modificarNuevaDescripcion= descripcion
+    // this.modificarNuevoStock=stock
+    // this.modificarNuevoPrecio=precio
+
+     formCodigo.value =   codigo
+     formNombre.value =   nombre
+     formDescripcion.value =   descripcion
+     formStock.value =   stock
+     formPrecio.value = precio
+
+    // formCodigo.textContent =   codigo
+    // formNombre.textContent =   nombre
+    // formDescripcion.textContent=   descripcion
+    // formStock.textContent =   stock
+    // formPrecio.textContent =   precio
+
+
+
+
+  
+
+}
 
 app.mount('#app');

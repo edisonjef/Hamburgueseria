@@ -34,13 +34,13 @@
                     </thead>
                     <tbody>
                         <tr v-for="producto in productos" :key="producto.nombre">
-                            <td>{{producto.codigo}}</td>
-                            <td>{{ producto.nombre }}</td>
-                            <td>{{ producto.descripcion }}</td>
-                            <td>{{ producto.stock }}</td>
-                            <td>{{ producto.precio }}</td>
+                            <td :id="`codigo${producto.codigo}`">{{producto.codigo}}</td>
+                            <td :id="`nombre${producto.codigo}`" >{{ producto.nombre }}</td>
+                            <td :id="`descripcion${producto.codigo}`" >{{ producto.descripcion }}</td>
+                            <td :id="`stock${producto.codigo}`" >{{ producto.stock }}</td>
+                            <td :id="`precio${producto.codigo}`" >{{ producto.precio }}</td>
                             <td>
-                                <button type="button" @click="esperModif($event)">
+                                <button type="button" @click="esperModif($event)" :id="producto.codigo" >
                                     Editar
                                 </button>
                             </td>
